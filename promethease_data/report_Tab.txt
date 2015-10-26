@@ -1,0 +1,1330 @@
+#Promethease	tab-genotype	0.1.164	2015-10-26 16:55
+#Column-names	
+Name	Magnitude	Repute	PopulationFreq	Orientation	GMAF	Summary	Description
+rs2073963(G;G)	2.5	Bad	15.0%	plus	0.4444	increased risk of baldness	increased risk of baldness
+rs10825992(G;T)	2.0	Bad	48.2%	plus	0.388	increased high myopia risk	increased high myopia risk  Associated with 'high myopia' in French people. 46.3% of people with high myopia had G here, compared to 34.8% of people without high myopia.(table)
+rs6311(C;T)	2.0	Good	52.2%	plus	0.4376	Normal risk of sexual dysfunction when taking SSRI Antidepressants.	Normal risk of sexual dysfunction when taking SSRI Antidepressants.
+rs12212067(T;T)	1.5	Mixed	84.8%	plus	0.1336	Greater inflammatory response	Greater inflammatory response  Associated with better outcomes for malaria patients, but worse outcomes for rheumatoid arthritis and Crohn's disease patients.
+rs6036025(G;G)	1.2	Bad	84.1%	plus	0.2034	more likely to go bald	more likely to go bald  more likely to go bald
+rs6897876(C;T)	1.1	Bad	47.8%	plus	0.4986	3x increased testicular cancer risk for men	3x increased testicular cancer risk for men
+rs309375(G;T)	1.1		48.7%	minus	0.2259	Average mosquito bites	Average mosquito bites
+rs10429924(T;T)			0.0%	plus	0.174		
+rs13149290(T;T)	1.0	Good	0.0%	plus	0.416	Normal risk of developing prostate cancer	Normal risk of developing prostate cancer
+rs3826782(T;T)			0.0%	minus	0.1455		
+rs10519410(C;C)			1.8%	minus	0.1951		
+rs6470517(G;G)			1.8%	plus	0.1217		
+rs3786800(G;G)			1.9%	minus	0.1791		
+rs1561927(G;G)			3.5%	minus			
+rs205499(T;T)			3.5%	minus	0.1295		
+rs602618(C;C)			3.5%	plus	0.4867		
+rs12204127(T;T)			4.4%	plus	0.1171		
+rs12545109(A;A)			4.4%	plus			
+rs878131(T;T)			4.4%	minus	0.275		
+rs10007052(A;A)			5.3%	plus	0.4219		
+rs1425902(G;G)			5.3%	plus			
+rs2698530(C;C)			6.2%	plus			
+rs478665(A;G)			6.2%	plus	0.1175		
+rs7012413(T;T)			6.2%	plus	0.3861		
+rs7932167(C;C)			6.2%	minus	0.2837		
+rs11166827(C;C)			7.1%	plus	0.4073		
+rs1806649(T;T)			7.1%	plus	0.1382		
+rs7515106(C;C)			7.1%	plus			
+rs12750249(C;C)			8.0%	plus	0.2236		
+rs1317830(C;C)			8.0%	minus	0.32		
+rs2148356(T;T)			8.0%	minus	0.3081		
+rs3853445(C;C)			8.0%	plus	0.2456		
+rs4954218(G;G)			8.0%	plus	0.0978		
+rs89715(T;T)			8.0%	plus	0.4582		
+rs955943(A;G)			8.0%	minus	0.0932		
+rs4507975(G;G)			8.1%	plus	0.2805		
+rs1874165(C;T)			8.8%	plus	0.2066		
+rs9275698(G;G)			8.9%	plus	0.32		
+rs16879765(C;T)			9.1%	plus	0.124		
+rs10486722(C;C)			9.7%	plus	0.4316		
+rs10768140(T;T)			9.7%	plus	0.4927		
+rs1852612(T;T)			9.7%	plus			
+rs1930146(C;C)			9.7%	plus			
+rs33436(T;T)			9.7%	minus	0.4624		
+rs4258076(T;T)			9.7%	plus	0.253		
+rs4673301(C;T)			9.7%	plus			
+rs467650(C;C)			9.7%	plus	0.3457		
+rs730566(T;T)			9.7%	minus	0.3384		
+rs12706724(A;A)			9.9%	plus			
+rs2519974(T;T)			9.9%	minus	0.3287		
+rs17614462(A;G)			10.6%	plus	0.04867		
+rs477992(A;A)			10.6%	plus	0.2534		
+rs4796995(G;G)			10.6%	plus	0.4559		
+rs7221274(G;G)			10.6%	plus	0.3439		
+rs7690467(C;C)			10.6%	plus	0.3714		
+rs316274(A;A)			10.7%	plus	0.2314		
+rs1399090(C;T)			10.9%	plus	0.2493		
+rs12144344(T;T)			11.5%	plus			
+rs17360053(C;C)			11.5%	plus			
+rs7144366(T;T)			11.5%	plus	0.4949		
+rs11709498(A;A)			11.6%	plus			
+rs879882(T;T)			11.6%	plus	0.4334		
+rs1659258(A;G)			12.4%	plus	0.08724		
+rs2069408(G;G)			12.4%	plus	0.2378		
+rs2251844(C;T)			12.4%	plus	0.3457		
+rs2284659(T;T)			12.4%	plus			
+rs4731302(C;C)			12.4%	plus			
+rs6040449(G;G)			12.4%	plus			
+rs948426(C;C)			12.4%	minus	0.2195		
+rs1724425(T;T)			13.3%	plus	0.3792		
+rs2771051(G;G)			13.3%	plus	0.4945		
+rs4131826(G;G)			13.3%	minus			
+rs4969170(A;A)			13.3%	plus	0.4192		
+rs7694661(A;A)			13.3%	plus	0.3903		
+rs7830490(A;A)			13.3%	plus	0.4247		
+rs11889798(C;T)			14.2%	plus	0.1768		
+rs12644436(A;A)			14.2%	plus	0.4215		
+rs17737465(G;G)			14.2%	plus	0.1754		
+rs2332897(A;A)			14.2%	plus	0.2874		
+rs361147(C;C)			14.2%	minus	0.3962		
+rs782931(A;A)			14.2%	plus			
+rs2086512(A;G)			15.0%	plus	0.1538		
+rs2278556(A;A)			15.0%	plus	0.4017		
+rs6678914(A;A)			15.0%	plus	0.3411		
+rs10492418(T;T)			15.2%	minus	0.3604		
+rs11222869(G;G)			15.9%	plus	0.4982		
+rs7089227(G;G)			15.9%	plus			
+rs7698623(C;T)			15.9%	plus	0.07622		
+rs7864204(A;A)			15.9%	plus	0.4725		
+rs1155848(A;G)			15.9%	minus			
+rs2727261(A;G)			15.9%	minus	0.3967		
+rs2659703(A;A)			16.1%	plus			
+rs11060369(C;C)			16.8%	plus	0.4261		
+rs848452(C;T)			16.8%	plus	0.1529		
+rs6432018(C;C)			17.0%	plus	0.4826		
+rs10738760(A;A)			17.7%	plus	0.433		
+rs11619878(G;G)			17.7%	plus	0.3719		
+rs2116050(C;C)			17.7%	minus	0.3981		
+rs507230(G;G)			17.7%	plus	0.3512		
+rs619289(C;T)			17.7%	plus	0.2268		
+rs6681460(A;A)			17.7%	plus	0.264		
+rs7235528(C;T)			17.7%	plus	0.3471		
+rs8099939(T;T)			17.7%	plus	0.416		
+rs11867581(G;G)			17.9%	plus			
+rs16843372(T;T)			17.9%	plus			
+rs9601248(T;T)			17.9%	plus	0.4646		
+rs9917256(A;G)			17.9%	plus	0.1869		
+rs881301(C;C)			18.3%	plus	0.3407		
+rs11859036(A;A)			18.6%	plus	0.2236		
+rs2079147(G;G)			18.6%	plus	0.2805		
+rs6087099(A;G)			18.6%	plus	0.1253		
+rs7312122(A;G)			18.6%	plus			
+rs835784(G;G)			18.6%	plus	0.416		
+rs9277952(A;G)			18.6%	plus	0.1524		
+rs508485(T;T)			18.9%	plus	0.4734		
+rs10136789(C;T)			19.5%	plus			
+rs11949289(G;G)			19.5%	plus	0.2971		
+rs12651329(C;C)			19.5%	plus	0.478		
+rs13093086(G;G)			19.5%	plus			
+rs2553218(T;T)			19.5%	plus	0.382		
+rs4150581(A;A)			19.5%	plus			
+rs9635542(A;G)			19.5%	plus	0.1823		
+rs10495471(A;G)			20.4%	plus	0.14		
+rs11809524(C;T)			20.4%	plus			
+rs3852053(A;A)			20.4%	minus			
+rs6050267(A;G)			20.4%	plus	0.14		
+rs6064389(T;T)			20.4%	plus	0.478		
+rs1174864(T;T)			21.2%	minus	0.4376		
+rs1654410(T;T)			21.2%	plus	0.4995		
+rs17206779(C;C)			21.2%	plus	0.3976		
+rs1869026(G;G)			21.2%	minus			
+rs2788015(C;T)			21.2%	plus	0.2732		
+rs4733616(C;T)			21.2%	plus	0.1524		
+rs7141420(C;C)			21.2%	plus	0.4848		
+rs941853(A;G)			21.2%	plus			
+rs1054135(A;G)			21.2%	minus	0.3081		
+rs2274511(A;G)			21.2%	minus			
+rs17206232(A;C)			21.4%	plus	0.07897		
+rs804280(G;G)			21.4%	minus	0.2989		
+rs12321565(C;T)			22.1%	plus	0.0831		
+rs12882718(T;T)			22.1%	plus	0.3958		
+rs1877644(A;G)			22.1%	plus			
+rs2838088(C;T)			22.1%	plus			
+rs514644(C;T)			22.1%	plus			
+rs568157(G;G)			22.1%	plus			
+rs6838973(T;T)			22.1%	plus	0.4086		
+rs790356(A;A)			22.1%	plus	0.3898		
+rs9351730(A;A)			22.1%	plus	0.4766		
+rs516514(T;T)			22.3%	plus	0.4848		
+rs13053175(T;T)			23.0%	plus	0.258		
+rs1539241(A;G)			23.0%	plus	0.2677		
+rs1857407(A;A)			23.0%	plus	0.3292		
+rs1981429(A;A)			23.0%	minus			
+rs4315565(A;G)			23.0%	plus	0.4812		
+rs4800353(A;G)			23.0%	plus			
+rs8001641(G;G)			23.0%	plus	0.292		
+rs860873(A;A)			23.0%	plus			
+rs998731(T;T)			23.0%	plus	0.2911		
+rs2153299(G;G)			23.2%	minus			
+rs7814319(T;T)			23.2%	plus			
+rs2472649(C;T)			23.2%	minus	0.3508		
+rs12963484(T;T)			23.4%	plus	0.4646		
+rs11978472(C;C)			23.9%	plus	0.3691		
+rs12022722(C;C)			23.9%	plus	0.3232		
+rs17024608(A;G)			23.9%	plus	0.05923		
+rs2839440(C;T)			23.9%	plus	0.202		
+rs337663(G;G)			23.9%	plus	0.4031		
+rs626657(A;C)			23.9%	plus	0.2571		
+rs1964081(A;G)			23.9%	minus			
+rs6662617(G;G)			24.1%	plus	0.2819		
+rs7950069(A;G)			24.3%	plus	0.3866		
+rs10445672(C;T)			24.8%	plus	0.2071		
+rs12487452(C;G)			24.8%	plus	0.298		
+rs2473277(T;T)			24.8%	minus	0.4715		
+rs2585590(G;G)			24.8%	plus	0.3788		
+rs375092(A;C)			24.8%	plus			
+rs4304924(A;A)			24.8%	plus			
+rs713503(T;T)			24.8%	minus	0.4063		
+rs7171755(G;G)	1.0		24.8%	plus	0.4853	common/normal	common/normal
+rs7625555(C;C)			24.8%	plus	0.4082		
+rs10773338(A;G)			25.0%	plus			
+rs2011905(T;T)			25.0%	plus	0.4789		
+rs2832191(C;C)			25.5%	plus	0.4826		
+rs10906189(G;G)			25.7%	plus	0.4959		
+rs16864714(C;T)			25.7%	plus			
+rs17653722(G;T)			25.7%	plus			
+rs4667622(A;A)			25.7%	plus			
+rs6756590(C;C)			25.7%	plus	0.3848		
+rs7224837(A;G)			25.7%	plus	0.1162		
+rs7567687(C;C)			25.7%	plus			
+rs11649622(A;G)			25.9%	plus			
+rs12098973(A;G)			25.9%	plus	0.3209		
+rs17659543(C;T)			25.9%	plus			
+rs6723108(G;G)			25.9%	plus	0.1612		
+rs504348(C;G)			26.2%	minus	0.2388		
+rs10174573(T;T)			26.5%	plus	0.4591		
+rs12871532(T;T)			26.5%	plus	0.4881		
+rs1640299(G;G)			26.5%	plus			
+rs1956388(T;T)			26.5%	minus			
+rs2468677(T;T)			26.5%	plus	0.4128		
+rs4969168(A;G)			26.5%	plus	0.3462		
+rs7098785(A;A)			26.5%	plus			
+rs1559759(G;T)			26.5%	minus	0.186		
+rs2141698(A;G)			26.5%	minus	0.1465		
+rs10519005(T;T)			26.8%	plus			
+rs6017452(C;C)			26.8%	plus	0.4743		
+rs7848524(T;T)			26.8%	plus	0.3944		
+rs10487506(G;G)			27.4%	plus	0.4417		
+rs11628713(C;T)			27.4%	plus	0.1336		
+rs12249377(A;C)			27.4%	plus			
+rs1879282(C;T)			27.4%	plus	0.247		
+rs2058350(C;T)			27.4%	plus	0.2906		
+rs8192431(C;T)			27.4%	minus			
+rs6718520(G;G)			27.7%	plus	0.3026		
+rs1426891(A;G)			27.9%	plus	0.2736		
+rs10463352(G;G)			28.3%	plus	0.4449		
+rs11987235(A;G)			28.3%	plus	0.4141		
+rs12023396(A;G)			28.3%	plus			
+rs12591650(A;G)			28.3%	plus	0.2204		
+rs12671878(A;C)			28.3%	plus	0.1961		
+rs2717162(C;T)			28.3%	plus			
+rs3808942(C;T)			28.3%	plus	0.2833		
+rs4148102(A;G)			28.3%	plus	0.1823		
+rs6591256(A;A)			28.3%	plus	0.3196		
+rs7561268(C;C)			28.3%	plus			
+rs7713855(C;T)			28.3%	plus	0.1226		
+rs788748(G;G)			28.3%	plus			
+rs884460(G;G)			28.3%	minus	0.3439		
+rs9915657(T;T)			28.3%	plus	0.4408		
+rs1449572(A;C)			28.3%	minus	0.1882		
+rs2125443(C;T)			28.3%	minus	0.2259		
+rs3923087(A;G)			28.3%	minus	0.4789		
+rs1942836(C;T)			28.6%	plus	0.3967		
+rs4965814(C;T)			28.6%	plus	0.4385		
+rs10443196(T;T)			28.8%	plus			
+rs10013166(G;G)			29.2%	plus			
+rs10519201(G;T)			29.2%	plus	0.1419		
+rs1401454(G;G)			29.2%	minus			
+rs3890995(C;T)			29.2%	plus	0.2103		
+rs10108684(A;G)			29.5%	plus	0.1938		
+rs1027841(C;T)			30.0%	minus			
+rs1055356(G;G)			30.1%	minus	0.3255		
+rs10888838(C;T)			30.1%	plus	0.2172		
+rs11845632(G;G)			30.1%	plus			
+rs12052359(A;C)			30.1%	plus	0.2502		
+rs1429142(C;T)			30.1%	plus	0.3522		
+rs16862782(A;C)			30.1%	plus	0.1276		
+rs205611(A;G)			30.1%	plus	0.09504		
+rs9635726(C;T)			30.1%	plus	0.2805		
+rs4083578(A;C)			30.1%	minus	0.4931		
+rs4769585(C;C)			30.4%	plus	0.3168		
+rs1011397(C;T)			31.0%	plus	0.2227		
+rs12285276(C;G)			31.0%	plus	0.4899		
+rs4295599(A;C)			31.0%	plus	0.3352		
+rs460106(C;T)			31.0%	plus	0.4555		
+rs6477998(C;C)			31.0%	plus	0.4711		
+rs288139(C;T)			31.0%	minus	0.2314		
+rs3863747(C;T)			31.0%	minus	0.3444		
+rs6918777(G;G)			31.2%	plus	0.4541		
+rs10121009(C;T)			31.5%	plus	0.3485		
+rs2493137(C;T)			31.5%	plus	0.4913		
+rs6517656(A;G)			31.5%	plus	0.2906		
+rs6596428(T;T)			31.8%	plus	0.4022		
+rs1014137(T;T)			31.9%	plus			
+rs12565140(C;T)			31.9%	plus	0.1786		
+rs1866967(T;T)			31.9%	minus	0.4963		
+rs4308625(C;T)			31.9%	plus	0.287		
+rs4802234(G;G)			31.9%	plus	0.4307		
+rs6768930(T;T)			31.9%	plus	0.4063		
+rs7108738(G;T)			31.9%	plus	0.2365		
+rs7641175(A;G)			31.9%	plus	0.1437		
+rs2555603(G;T)			31.9%	minus	0.1827		
+rs3820897(A;G)			31.9%	minus			
+rs11265461(T;T)			32.1%	plus	0.3765		
+rs12694(A;A)			32.7%	minus	0.4435		
+rs7607316(A;C)			32.7%	plus	0.2897		
+rs7785730(A;G)			32.7%	plus			
+rs9656709(C;C)			32.7%	plus			
+rs9815663(C;T)			32.7%	plus	0.2112		
+rs9921222(C;C)			32.7%	plus	0.4178		
+rs1539143(C;T)			32.7%	minus			
+rs6495308(C;T)			33.0%	plus	0.4389		
+rs997154(A;G)			33.0%	plus	0.1901		
+rs7005380(G;G)			33.3%	plus	0.253		
+rs10758821(G;G)			33.6%	plus	0.4265		
+rs1204798(A;G)			33.6%	plus	0.4316		
+rs12302103(A;G)			33.6%	plus			
+rs13068101(A;G)			33.6%	plus	0.1947		
+rs2074114(C;T)			33.6%	plus			
+rs2476842(C;C)			33.6%	minus	0.4036		
+rs2840445(A;G)			33.6%	plus	0.3604		
+rs4342445(A;G)			33.6%	plus	0.2801		
+rs441460(G;G)			33.6%	plus	0.4587		
+rs4491709(C;T)			33.6%	plus	0.4656		
+rs7998314(A;C)			33.6%	plus	0.3609		
+rs9504361(A;A)			33.6%	plus	0.3903		
+rs2615977(G;T)			33.6%	minus	0.2163		
+rs4827155(C;C)			33.8%	plus	0.4855		
+rs10197940(T;T)			33.9%	plus	0.405		
+rs2235121(T;T)			33.9%	plus	0.3916		
+rs9529500(C;T)			33.9%	plus	0.1763		
+rs1198588(A;T)			34.5%	minus	0.1814		
+rs17691453(C;C)			34.5%	plus			
+rs2033195(T;T)			34.5%	plus	0.3747		
+rs2501873(G;G)			34.5%	minus	0.4559		
+rs2724635(T;T)			34.5%	minus	0.4605		
+rs274068(A;C)			34.5%	plus			
+rs4764124(C;C)			34.5%	plus	0.4605		
+rs731174(C;T)			34.5%	plus	0.2107		
+rs7431368(A;C)			34.5%	plus			
+rs5745568(A;C)			34.5%	minus			
+rs506338(C;T)			34.8%	plus			
+rs9971942(C;T)			34.8%	plus			
+rs879471(T;T)			35.1%	plus	0.3407		
+rs10074991(A;G)			35.4%	plus			
+rs10400419(C;C)			35.4%	plus	0.3567		
+rs10898459(T;T)			35.4%	plus			
+rs11615979(T;T)			35.4%	plus	0.3503		
+rs11675434(C;C)			35.4%	plus			
+rs11755164(C;C)			35.4%	plus	0.3315		
+rs11850957(C;T)			35.4%	plus	0.2617		
+rs13251954(A;G)			35.4%	plus	0.4904		
+rs1354774(T;T)			35.4%	minus	0.4481		
+rs1529102(T;T)			35.4%	minus	0.4059		
+rs2506030(A;A)			35.4%	plus			
+rs2995271(C;T)			35.4%	plus	0.4757		
+rs549433(C;T)			35.4%	plus			
+rs555044(A;C)			35.4%	plus			
+rs6699417(T;T)			35.4%	plus	0.3889		
+rs4647693(A;G)			35.4%	minus			
+rs875622(C;T)			35.4%	minus	0.3278		
+rs7144(T;T)			35.5%	plus	0.3563		
+rs7503953(A;C)			35.7%	plus	0.2245		
+rs10756819(A;A)			36.3%	plus			
+rs11072794(C;T)			36.3%	plus			
+rs1902491(G;G)			36.3%	minus	0.4752		
+rs197056(G;G)			36.3%	plus	0.4848		
+rs2215379(C;T)			36.3%	plus	0.253		
+rs2835267(C;C)			36.3%	plus			
+rs6084875(G;G)			36.3%	plus			
+rs6568433(T;T)			36.3%	plus	0.4972		
+rs7849270(A;G)			36.3%	plus			
+rs8012941(A;A)			36.3%	plus	0.4316		
+rs1990172(G;T)			36.3%	minus	0.4045		
+rs11599750(C;C)			36.4%	plus	0.3664		
+rs2030712(C;T)			36.9%	plus	0.3696		
+rs10275045(C;T)			37.2%	plus			
+rs10849605(C;C)			37.2%	plus	0.4486		
+rs10937273(G;G)			37.2%	plus	0.3255		
+rs17042140(C;T)			37.2%	plus			
+rs4721(A;A)			37.2%	minus	0.472		
+rs6588505(C;T)			37.2%	plus	0.3613		
+rs6606697(G;G)			37.2%	plus	0.4045		
+rs7289126(C;C)			37.2%	plus			
+rs8018967(T;T)			37.2%	plus			
+rs889140(T;T)			37.2%	minus			
+rs2440399(A;C)			37.2%	minus	0.4017		
+rs6811556(C;T)			37.4%	plus			
+rs988213(A;G)			37.5%	plus	0.3714		
+rs11130874(A;G)			38.1%	plus	0.168		
+rs11191692(G;G)			38.1%	plus	0.2828		
+rs11731175(G;T)			38.1%	plus	0.4582		
+rs399604(A;A)			38.1%	minus	0.4013		
+rs4983559(A;A)			38.1%	plus			
+rs6813195(C;T)			38.1%	plus			
+rs7726839(A;G)			38.1%	plus			
+rs7736604(G;T)			38.1%	plus	0.3687		
+rs10519951(A;G)			38.1%	minus	0.1708		
+rs2741354(A;G)			38.1%	minus	0.4835		
+rs261532(G;T)			38.4%	plus	0.4082		
+rs7157080(G;T)			38.4%	plus	0.2406		
+rs8127977(C;T)			38.4%	plus	0.4431		
+rs1735884(A;G)			38.4%	minus	0.2034		
+rs2720709(A;G)			38.5%	plus			
+rs11259403(C;T)			38.9%	plus	0.4839		
+rs2424460(C;C)			38.9%	plus			
+rs2885805(A;C)			38.9%	plus	0.2723		
+rs2937573(A;G)			38.9%	plus			
+rs4742170(T;T)			38.9%	plus	0.4444		
+rs4932178(C;C)			38.9%	plus	0.2686		
+rs6469937(A;A)			38.9%	plus	0.3972		
+rs6577655(C;T)			38.9%	plus	0.4348		
+rs6957923(G;G)			38.9%	plus	0.2833		
+rs7656411(G;T)			38.9%	plus	0.4091		
+rs7765175(C;C)			38.9%	plus	0.2736		
+rs9263871(A;G)			38.9%	plus			
+rs9636231(A;G)			38.9%	plus	0.2461		
+rs1509569(C;T)			38.9%	minus			
+rs12054895(G;T)			39.3%	plus	0.3444		
+rs3771362(C;T)			39.3%	plus	0.1905		
+rs7718446(A;A)			39.3%	plus	0.4353		
+rs1126214(T;T)			39.6%	plus	0.4302		
+rs2631372(C;G)			39.6%	minus	0.2856		
+rs3000073(A;G)			39.6%	plus	0.2498		
+rs10052004(A;G)			39.8%	plus	0.2456		
+rs1052990(T;T)			39.8%	plus	0.3113		
+rs11653144(C;C)			39.8%	plus	0.4334		
+rs12311304(T;T)			39.8%	plus			
+rs13128441(C;T)			39.8%	plus			
+rs1336472(C;C)			39.8%	minus	0.3797		
+rs167428(T;T)			39.8%	plus	0.3751		
+rs17588172(T;T)			39.8%	plus			
+rs1875620(A;G)			39.8%	plus	0.3705		
+rs1939008(G;G)			39.8%	plus	0.326		
+rs2180611(G;G)			39.8%	minus	0.4927		
+rs2342371(A;G)			39.8%	plus			
+rs2427345(C;C)			39.8%	plus	0.3636		
+rs2651244(G;G)			39.8%	plus	0.2479		
+rs4820539(G;G)			39.8%	plus			
+rs548726(C;T)			39.8%	plus	0.2098		
+rs7195386(C;T)			39.8%	plus	0.3903		
+rs731945(C;T)			39.8%	plus	0.3682		
+rs735239(A;A)			39.8%	plus			
+rs851987(C;T)			39.8%	minus	0.3843		
+rs1057035(T;T)			40.2%	plus	0.2227		
+rs4141130(C;T)			40.2%	plus	0.3618		
+rs6717546(G;G)			40.2%	plus			
+rs10443215(T;T)			40.7%	plus			
+rs10498070(A;C)			40.7%	plus	0.4408		
+rs11937061(G;G)			40.7%	plus	0.3315		
+rs12724079(C;C)			40.7%	plus			
+rs12822507(A;A)			40.7%	plus	0.3444		
+rs1394371(C;C)			40.7%	plus	0.1772		
+rs1741344(T;T)			40.7%	plus	0.3053		
+rs2125000(C;T)			40.7%	plus	0.23		
+rs2140855(C;T)			40.7%	plus	0.4178		
+rs2651206(C;T)			40.7%	plus	0.4619		
+rs266719(C;T)			40.7%	plus			
+rs2764264(C;T)			40.7%	plus	0.4371		
+rs4074995(A;G)			40.7%	plus			
+rs4516035(T;T)			40.7%	plus	0.2149	normal	normal
+rs550818(A;G)			40.7%	plus	0.1882		
+rs9871864(C;T)			40.7%	plus			
+rs1458038(A;G)			40.7%	minus	0.2521		
+rs1874252(A;C)			40.7%	minus			
+rs1491818(C;T)			41.4%	minus	0.3053		
+rs10495024(T;T)			41.5%	plus	0.3489		
+rs10212536(A;G)			41.6%	plus	0.2819		
+rs10800485(C;T)			41.6%	plus	0.331		
+rs10889850(G;G)			41.6%	plus			
+rs12541254(G;G)			41.6%	plus	0.2778		
+rs16849225(C;T)			41.6%	plus	0.242		
+rs2006933(G;T)			41.6%	plus	0.2291		
+rs2283792(G;T)			41.6%	plus	0.4591		
+rs4308687(G;G)			41.6%	plus	0.4578		
+rs4659682(G;G)			41.6%	plus	0.3003		
+rs4693596(C;T)			41.6%	plus	0.3742		
+rs4703822(G;G)			41.6%	plus	0.2635		
+rs6599175(C;T)			41.6%	plus	0.2961		
+rs6758183(A;G)			41.6%	plus	0.1566		
+rs7314811(T;T)			41.6%	plus	0.3958		
+rs7543757(C;C)			41.6%	plus	0.3476		
+rs8087522(G;G)			41.6%	plus	0.3283		
+rs913678(C;T)			41.6%	plus	0.3724		
+rs9395865(C;T)			41.6%	plus	0.4775		
+rs222741(C;T)			41.6%	minus	0.2245		
+rs370409(G;T)			41.6%	minus	0.2507		
+rs666174(C;T)			41.6%	minus			
+rs3785977(G;G)			41.7%	plus	0.4729		
+rs12126655(A;G)			42.0%	plus			
+rs2406342(G;G)			42.0%	plus	0.4339		
+rs4373767(C;T)			42.0%	plus	0.3636		
+rs720475(A;G)			42.0%	plus	0.1598		
+rs7254232(A;G)			42.0%	plus			
+rs7324557(G;G)			42.0%	plus	0.2961		
+rs9659092(A;G)			42.0%	plus	0.2952		
+rs45430(A;G)			42.0%	minus	0.4417		
+rs10278557(A;G)			42.2%	plus	0.2502		
+rs10923038(A;C)			42.5%	plus			
+rs11205641(A;G)			42.5%	plus	0.314		
+rs12543318(A;A)			42.5%	plus	0.3916		
+rs12797615(T;T)			42.5%	plus	0.1602		
+rs2671692(A;A)			42.5%	plus	0.4706		
+rs4387163(A;G)			42.5%	plus	0.4183		
+rs4619807(A;A)			42.5%	plus			
+rs4969385(C;T)			42.5%	plus			
+rs539588(C;C)			42.5%	minus	0.3035		
+rs631208(A;G)			42.5%	plus	0.3733		
+rs6552828(G;G)			42.5%	plus	0.4431		
+rs6573908(A;C)			42.5%	plus	0.3448		
+rs6607284(T;T)			42.5%	plus	0.3912		
+rs7152530(G;G)			42.5%	plus			
+rs7847449(A;C)			42.5%	plus			
+rs10505725(A;G)			42.5%	minus	0.3104		
+rs2280381(A;G)			42.5%	minus	0.3035		
+rs4006531(C;T)			42.5%	minus			
+rs10915846(A;G)			42.9%	plus	0.2075		
+rs2017567(C;T)			42.9%	plus	0.478		
+rs2036225(C;T)			42.9%	plus	0.4715		
+rs2817461(C;C)			42.9%	minus	0.2328		
+rs3793039(A;G)			42.9%	plus	0.2617		
+rs17107115(A;A)			43.1%	plus	0.2787		
+rs9886428(A;G)			43.2%	plus	0.3292		
+rs11867479(C;T)			43.4%	plus	0.3329		
+rs12414407(C;T)			43.4%	plus	0.2934		
+rs1245810(A;C)			43.4%	plus			
+rs1245819(A;G)			43.4%	plus			
+rs1390943(G;T)			43.4%	plus	0.3953		
+rs1395103(G;G)			43.4%	plus	0.2567		
+rs1871045(C;T)			43.4%	plus	0.3949		
+rs2236303(C;C)			43.4%	plus	0.3159		
+rs2336030(C;T)			43.4%	plus	0.3297		
+rs2425752(C;T)			43.4%	plus	0.2277		
+rs294588(C;C)			43.4%	plus	0.2222		
+rs3784099(A;G)			43.4%	plus	0.3779		
+rs3819024(A;G)			43.4%	plus	0.3669		
+rs7591996(A;A)			43.4%	plus	0.3765		
+rs9316500(T;T)			43.4%	plus	0.3783		
+rs1476698(C;T)			43.4%	minus			
+rs591540(A;C)			43.6%	minus			
+rs10735416(C;T)			43.8%	plus			
+rs11031093(G;G)			43.8%	plus	0.1685		
+rs1485993(C;C)			43.8%	minus	0.3994		
+rs1572438(G;G)			43.8%	minus	0.3356		
+rs9393366(A;G)			43.8%	plus	0.2264		
+rs3849491(A;G)			43.8%	minus	0.4522		
+rs1570854(T;T)			44.1%	plus	0.4812		
+rs10228265(A;G)			44.2%	plus	0.3347		
+rs10878640(G;T)			44.2%	plus	0.3099		
+rs11110099(A;C)			44.2%	plus	0.4073		
+rs1277203(T;T)			44.2%	plus	0.4036		
+rs13021401(C;T)			44.2%	plus	0.3113		
+rs13100616(A;G)			44.2%	plus			
+rs16835198(G;T)			44.2%	plus			
+rs2241049(A;G)			44.2%	plus			
+rs2466035(T;T)			44.2%	plus	0.4509		
+rs3024685(C;T)			44.2%	plus	0.4545		
+rs383902(C;C)			44.2%	plus	0.388		
+rs4561177(A;G)			44.2%	plus			
+rs4650608(T;T)			44.2%	plus	0.2291		
+rs6072161(C;T)			44.2%	plus	0.4444		
+rs6599400(A;C)			44.2%	plus	0.298		
+rs6892282(G;T)			44.2%	plus	0.4959		
+rs7649739(A;A)			44.2%	plus	0.3545		
+rs7800418(C;C)			44.2%	plus			
+rs9506514(A;C)			44.2%	plus	0.4927		
+rs9568797(C;T)			44.2%	plus			
+rs9660992(A;G)			44.2%	plus			
+rs10484854(A;G)			44.2%	minus	0.1272		
+rs1477798(A;G)			44.2%	minus	0.2176		
+rs796127(A;G)			44.2%	minus			
+rs4478147(A;G)			44.4%	plus	0.4467		
+rs2889829(A;G)			44.6%	plus	0.3297		
+rs4336470(C;T)			44.6%	plus	0.4082		
+rs6448771(A;G)			44.6%	plus	0.4201		
+rs3812163(A;T)			44.6%	minus	0.3352		
+rs927650(C;T)			45.0%	plus	0.3673		
+rs10492025(C;C)			45.1%	plus			
+rs11045392(C;T)			45.1%	plus	0.3994		
+rs11062357(C;T)			45.1%	plus			
+rs12419062(A;A)			45.1%	plus	0.4486		
+rs154268(T;T)			45.1%	plus			
+rs207954(G;G)			45.1%	minus	0.3039		
+rs2189784(A;G)			45.1%	plus	0.3526		
+rs2718058(A;G)			45.1%	plus			
+rs2764208(A;G)			45.1%	plus			
+rs4075511(A;C)			45.1%	plus	0.3659		
+rs6102185(A;G)			45.1%	plus	0.3439		
+rs7481514(A;G)			45.1%	plus	0.2443		
+rs753955(C;C)			45.1%	minus	0.4408		
+rs761899(G;T)			45.1%	plus	0.3875		
+rs7637404(G;T)			45.1%	plus			
+rs7672337(A;G)			45.1%	plus	0.3219		
+rs7792596(T;T)			45.1%	plus	0.388		
+rs9905820(G;T)			45.1%	plus	0.4963		
+rs749457(C;T)			45.1%	minus	0.4412		
+rs1124941(G;G)			45.5%	minus			
+rs533556(A;C)			45.5%	plus	0.3696		
+rs9462856(C;T)			45.5%	plus	0.4848		
+rs9792548(A;G)			45.5%	plus	0.4564		
+rs3923086(G;T)			45.5%	minus	0.3177		
+rs251925(C;T)			45.9%	plus	0.3623		
+rs3242(C;C)			45.9%	minus	0.2287		
+rs10077875(A;G)			46.0%	plus	0.4959		
+rs10207392(A;G)			46.0%	plus	0.4858		
+rs1044873(C;T)			46.0%	plus			
+rs10495537(C;T)			46.0%	plus	0.2672		
+rs1159918(G;G)			46.0%	minus	0.4298		
+rs1211375(C;C)			46.0%	plus	0.3682		
+rs12150079(A;G)			46.0%	plus	0.219		
+rs12809597(G;T)			46.0%	plus	0.1768		
+rs1364505(A;G)			46.0%	plus	0.3026		
+rs16872571(C;T)			46.0%	plus	0.2769		
+rs17496827(A;C)			46.0%	plus	0.4803		
+rs17668565(C;T)			46.0%	plus	0.3641		
+rs2068888(A;G)			46.0%	plus	0.4963		
+rs2275913(A;G)			46.0%	plus	0.315	1.4x increased gastric cancer risk. Increased risk of Acute Graft-Versus-Host Disease after Unrelated Bone Marrow Transplantation	1.4x increased gastric cancer risk. Increased risk of Acute Graft-Versus-Host Disease after Unrelated Bone Marrow Transplantation
+rs2282015(A;A)			46.0%	minus	0.4261		
+rs2400997(C;T)			46.0%	plus	0.3659		
+rs6017787(T;T)			46.0%	plus	0.3875		
+rs6030171(T;T)			46.0%	plus	0.4633		
+rs6459467(A;G)			46.0%	plus			
+rs6558578(G;T)			46.0%	plus			
+rs6773931(A;C)			46.0%	plus	0.3324		
+rs7130929(A;C)			46.0%	plus			
+rs7224610(A;C)			46.0%	plus	0.259		
+rs7964120(C;T)			46.0%	plus			
+rs9394438(A;G)			46.0%	plus	0.4063		
+rs1880756(A;G)			46.0%	minus	0.2769		
+rs245178(A;G)			46.0%	minus	0.3049		
+rs10759930(C;T)			46.4%	plus	0.3875		
+rs13398206(T;T)			46.4%	plus	0.2291		
+rs10025405(A;G)			46.9%	plus	0.4123		
+rs10466455(C;T)			46.9%	plus			
+rs1549318(C;T)			46.9%	plus	0.455		
+rs17221829(A;C)			46.9%	plus			
+rs1896731(C;T)			46.9%	plus	0.4449		
+rs2930961(C;T)			46.9%	plus	0.4073		
+rs4385494(G;T)			46.9%	plus	0.4867		
+rs4792814(C;C)			46.9%	plus	0.4004		
+rs4848143(G;G)			46.9%	plus	0.4798		
+rs6012564(A;G)		Bad	46.9%	plus		increased proneness to anger	increased proneness to anger
+rs6027506(A;G)			46.9%	plus	0.3292		
+rs616488(T;T)			46.9%	minus	0.2837		
+rs6792584(A;G)			46.9%	plus	0.2107		
+rs7570971(C;C)			46.9%	plus	0.2287		
+rs829417(C;C)			46.9%	plus	0.2975		
+rs909486(C;T)			46.9%	plus	0.4775		
+rs9321334(A;G)			46.9%	plus			
+rs1469622(A;G)			46.9%	minus			
+rs4075664(A;G)			46.9%	minus	0.4578		
+rs963193(A;C)			46.9%	minus	0.4008		
+rs10745877(A;G)			47.3%	plus	0.4995		
+rs5771040(A;G)			47.3%	plus	0.2397		
+rs6478282(G;T)			47.3%	plus	0.2994		
+rs892515(C;T)			47.3%	plus	0.3811		
+rs1417437(A;G)			47.3%	minus	0.2746		
+rs2474619(A;C)			47.7%	plus			
+rs161976(C;T)			47.7%	minus			
+rs1020410(T;T)			47.8%	plus			
+rs10444533(C;C)			47.8%	plus			
+rs12621220(C;C)			47.8%	plus			
+rs1910358(T;T)			47.8%	plus	0.3095		
+rs197273(A;G)			47.8%	plus	0.4467		
+rs2823357(A;G)			47.8%	plus	0.4601		
+rs378108(A;G)			47.8%	plus	0.4086		
+rs3827730(C;T)			47.8%	plus	0.4307		
+rs4817775(A;C)			47.8%	plus			
+rs4833103(A;C)			47.8%	plus	0.2319	0.75x decreased risk for Non-hodgkin's lymphoma	0.75x decreased risk for Non-hodgkin's lymphoma
+rs4980785(C;T)			47.8%	plus	0.4688		
+rs6445961(G;G)			47.8%	plus	0.4311		
+rs7553212(A;A)			47.8%	plus	0.275		
+rs7979367(G;T)			47.8%	plus			
+rs8050326(A;G)			47.8%	plus	0.4513		
+rs877819(A;A)			47.8%	plus	0.4669		
+rs923520(A;A)			47.8%	minus	0.3967		
+rs675482(C;T)			47.8%	minus			
+rs706793(C;T)			47.8%	minus	0.2681		
+rs10809650(A;A)			48.2%	plus	0.3292		
+rs2018683(G;T)			48.2%	plus	0.3976		
+rs2749817(C;T)			48.2%	plus			
+rs854571(C;C)			48.6%	plus	0.3531		
+rs527790(A;G)			48.6%	minus	0.2961		
+rs1077989(A;C)			48.7%	plus	0.3838		
+rs10881542(C;T)			48.7%	plus	0.4578		
+rs11070098(C;T)			48.7%	plus	0.2828		
+rs12446319(C;T)			48.7%	plus	0.4954		
+rs12754041(G;T)			48.7%	plus	0.4265		
+rs1467311(T;T)			48.7%	minus			
+rs1530016(C;T)			48.7%	plus	0.3907		
+rs6744682(A;T)			48.7%	plus	0.359		
+rs6902875(A;G)			48.7%	plus			
+rs7582658(A;G)			48.7%	plus	0.472		
+rs7803705(A;A)			48.7%	plus	0.2241		
+rs797906(C;C)			48.7%	plus	0.4426		
+rs8014131(A;C)			48.7%	plus	0.4201		
+rs931471(T;T)			48.7%	plus	0.461		
+rs1856746(C;T)			48.7%	minus			
+rs2071236(C;T)			48.7%	minus	0.3356		
+rs2291447(A;C)			48.7%	minus	0.3875		
+rs878960(A;G)			48.7%	minus	0.4913		
+rs12481805(G;G)			49.1%	plus	0.1547		
+rs264943(A;C)			49.1%	plus	0.3104		
+rs7719829(A;G)			49.1%	plus			
+rs11832(A;G)			49.1%	minus	0.4449		
+rs734313(C;G)			49.1%	minus	0.3283		
+rs6771632(C;T)			49.2%	plus			
+rs10877839(T;T)			49.5%	plus	0.3021		
+rs10931041(C;T)			49.6%	plus	0.4614		
+rs11129295(C;T)			49.6%	plus	0.494		
+rs11158820(G;G)			49.6%	plus	0.3407		
+rs1535001(A;A)			49.6%	plus	0.4518		
+rs2367563(T;T)			49.6%	minus	0.427		
+rs310245(C;T)			49.6%	plus			
+rs4596632(A;A)			49.6%	plus	0.4527		
+rs4953388(G;G)			49.6%	plus			
+rs745080(C;C)			49.6%	minus	0.3871		
+rs920590(T;T)			49.6%	plus	0.3949		
+rs9502570(C;C)			49.6%	plus			
+rs1533087(A;G)			49.6%	minus	0.4927		
+rs2024125(C;T)			49.6%	minus	0.3912		
+rs3815854(A;G)			49.6%	minus	0.4426		
+rs624988(A;G)			49.6%	minus			
+rs500766(C;C)			50.0%	plus	0.2548		
+rs7607369(A;G)			50.0%	plus	0.477		
+rs807624(C;C)			50.0%	minus	0.4316		
+rs10794595(C;T)			50.4%	plus	0.3039		
+rs11864909(C;C)			50.4%	plus	0.2107		
+rs11890028(T;T)			50.4%	plus	0.1974		
+rs12757998(C;C)			50.4%	plus	0.1584		
+rs164390(G;T)			50.4%	plus			
+rs1741981(T;T)			50.4%	plus	0.4876		
+rs17724206(G;G)			50.4%	plus	0.1653		
+rs1861612(A;G)			50.4%	plus			
+rs2237457(C;T)			50.4%	plus			
+rs2523189(C;T)			50.4%	plus			
+rs2824292(A;G)			50.4%	plus	0.4559		
+rs318497(A;G)			50.4%	plus	0.4793		
+rs4336372(C;C)			50.4%	plus	0.4412		
+rs4851526(A;G)			50.4%	plus			
+rs4851527(A;G)			50.4%	plus			
+rs6873793(C;T)			50.4%	plus	0.494		
+rs7136702(C;T)			50.4%	plus	0.4637		
+rs7932938(G;T)			50.4%	plus	0.4096		
+rs8017172(A;G)			50.4%	plus			
+rs9499708(C;T)			50.4%	plus	0.258		
+rs799161(A;G)			50.4%	minus			
+rs41440(A;A)			50.5%	plus			
+rs7112925(C;T)			50.5%	plus	0.3448		
+rs722258(C;T)			50.5%	plus	0.4293		
+rs1456737(A;A)			50.9%	plus	0.4504		
+rs2116081(C;T)			50.9%	plus			
+rs569434(C;T)			50.9%	minus	0.3682		
+rs10035961(A;A)			51.3%	plus	0.3563		
+rs10115383(G;G)			51.3%	plus	0.3407		
+rs10518142(G;G)			51.3%	plus	0.3191		
+rs10754833(C;T)			51.3%	plus	0.3581		
+rs10873998(C;T)			51.3%	plus	0.4596		
+rs11082277(A;G)			51.3%	plus	0.3177		
+rs11999802(T;T)			51.3%	plus	0.3347		
+rs1298989(C;C)			51.3%	minus	0.1983		
+rs129963(C;T)			51.3%	plus	0.3347		
+rs13072512(A;G)			51.3%	plus	0.4986		
+rs1376359(C;C)			51.3%	plus			
+rs1390096(G;G)			51.3%	plus	0.2677		
+rs3131866(C;C)			51.3%	minus	0.2759		
+rs3762986(C;T)			51.3%	plus	0.4977		
+rs4627609(C;T)			51.3%	plus	0.444		
+rs4849121(A;G)			51.3%	plus	0.4747		
+rs4897574(C;T)			51.3%	plus			
+rs659580(C;C)			51.3%	plus	0.2782		
+rs6980334(A;A)			51.3%	plus			
+rs7138744(A;A)			51.3%	plus			
+rs724950(C;T)			51.3%	plus			
+rs7611694(A;C)			51.3%	plus	0.4656		
+rs8036270(A;G)			51.3%	plus	0.3724		
+rs2069727(A;G)			51.3%	minus	0.2704		
+rs2070788(C;T)			51.3%	minus			
+rs41350144(A;T)			51.3%	minus	0.4688		
+rs2341459(C;C)			51.8%	plus	0.3852		
+rs2373124(A;A)			51.8%	plus			
+rs534870(A;A)			51.8%	plus	0.3159		
+rs7624766(A;G)			51.8%	plus			
+rs10513968(A;G)			52.2%	plus			
+rs10893872(C;T)			52.2%	plus	0.4247		
+rs11248850(A;G)			52.2%	plus	0.3159		
+rs3790672(T;T)			52.2%	plus	0.3154		
+rs4813802(G;T)			52.2%	plus	0.2548		
+rs7029536(C;C)			52.2%	plus	0.343		
+rs7319358(C;T)			52.2%	plus			
+rs7503807(A;C)			52.2%	plus	0.3985		
+rs928655(A;A)			52.2%	plus	0.4408		
+rs984971(A;G)			52.2%	plus			
+rs1800792(A;G)			52.2%	minus	0.3062		
+rs2454908(A;G)			52.2%	minus	0.3347		
+rs711355(A;G)			52.2%	minus	0.4031		
+rs704840(T;T)			52.7%	plus	0.2916		
+rs2025751(A;G)			52.7%	minus			
+rs10182181(A;G)			53.1%	plus	0.4596		
+rs1022442(A;G)			53.1%	plus	0.3586		
+rs10852939(C;C)			53.1%	plus	0.186		
+rs10918196(C;T)			53.1%	plus	0.4582		
+rs1732887(T;T)			53.1%	minus	0.2144		
+rs1923295(C;T)			53.1%	plus	0.4454		
+rs1971791(A;G)			53.1%	plus	0.4449		
+rs2041278(G;G)			53.1%	plus	0.4247		
+rs2894342(G;G)			53.1%	minus	0.2314		
+rs310230(G;G)			53.1%	plus	0.3251		
+rs3814570(C;C)	1.0	Good	53.1%	plus	0.1818	Normal risk of developing Crohn's disease	Normal risk of developing Crohn's disease
+rs4909801(T;T)			53.1%	plus			
+rs555017(A;G)			53.1%	plus			
+rs592229(G;T)			53.1%	plus	0.4109		
+rs632057(G;T)			53.1%	plus			
+rs652722(G;G)			53.1%	minus	0.3508		
+rs6718902(C;C)			53.1%	plus	0.2819		
+rs6790925(C;T)			53.1%	plus	0.4252		
+rs7025417(T;T)			53.1%	plus	0.2888		
+rs1231831(A;G)			53.1%	minus			
+rs1865075(A;G)			53.1%	minus	0.4362		
+rs1186300(T;T)			53.6%	plus			
+rs16835979(C;C)			53.6%	plus			
+rs2074560(A;A)			53.6%	plus			
+rs3788317(G;G)			53.6%	plus	0.287		
+rs12800438(A;A)			54.0%	plus			
+rs12938031(A;G)			54.0%	plus			
+rs4141819(T;T)			54.0%	plus	0.253		
+rs4657616(A;G)			54.0%	plus	0.348		
+rs5029748(C;C)			54.0%	minus	0.2851		
+rs6719884(A;C)			54.0%	plus	0.449		
+rs6738181(G;G)			54.0%	plus	0.2989		
+rs9390123(C;T)			54.0%	plus	0.4481		
+rs1421312(C;T)			54.0%	minus	0.4454		
+rs3783819(C;T)			54.0%	minus			
+rs17744026(T;T)			54.1%	plus			
+rs4148298(T;T)			54.1%	minus	0.2374		
+rs7085142(C;T)			54.1%	plus	0.4747		
+rs2297440(C;C)			54.2%	plus	0.3113		
+rs13146789(G;T)			54.5%	plus			
+rs625879(G;T)			54.5%	minus	0.4904		
+rs1110183(G;G)			54.9%	plus	0.2911		
+rs12752888(T;T)	1.0	Good	54.9%	plus		Normal progression to Alzheimer&#8217;s disease from mild cognitive impairment.	Normal progression to Alzheimer&#8217;s disease from mild cognitive impairment.
+rs1701930(A;G)			54.9%	plus	0.4826		
+rs2009314(T;T)			54.9%	minus	0.3347		
+rs2031577(C;C)			54.9%	minus	0.4403		
+rs2813746(A;C)			54.9%	plus			
+rs4262906(C;T)			54.9%	plus			
+rs4485401(A;G)			54.9%	plus	0.4417		
+rs4762767(C;C)			54.9%	minus	0.3274		
+rs4812712(C;C)			54.9%	plus			
+rs6574644(A;A)			54.9%	plus	0.2498		
+rs7147705(C;C)			54.9%	plus	0.4233		
+rs9961915(C;C)			54.9%	plus	0.4431		
+rs10857712(T;T)			55.0%	plus			
+rs2823093(G;G)			55.4%	plus	0.2567		
+rs414960(C;C)			55.4%	minus	0.3235		
+rs11615274(C;C)			55.8%	plus	0.1561		
+rs1402915(A;G)			55.8%	plus			
+rs2274788(T;T)			55.8%	plus	0.208		
+rs2518573(C;C)			55.8%	minus	0.3237		
+rs411089(C;C)			55.8%	plus	0.4826		
+rs4365667(C;C)			55.8%	plus			
+rs4778334(G;G)			55.8%	plus	0.2291		
+rs1411766(C;T)			55.8%	minus	0.2089		
+rs3135831(C;T)			55.8%	minus			
+rs967676(A;G)			55.8%	minus	0.2851		
+rs4380187(A;C)			55.9%	plus			
+rs17157266(T;T)			56.2%	plus	0.1841		
+rs1887346(C;C)			56.2%	minus	0.2984		
+rs290986(T;T)			56.2%	minus	0.2677		
+rs10495476(A;A)			56.6%	plus	0.3434		
+rs13153995(T;T)			56.6%	plus			
+rs1665650(G;G)			56.6%	minus	0.3301		
+rs2887631(A;A)			56.6%	plus			
+rs401758(G;G)			56.6%	minus	0.2406		
+rs6707272(C;C)			56.6%	plus	0.2943		
+rs6746082(A;A)			56.6%	plus	0.405		
+rs885834(A;G)			56.6%	plus	0.3838		
+rs9328321(G;G)			56.6%	plus	0.2989		
+rs9471058(C;C)			56.6%	plus	0.2424		
+rs1126179(C;T)			56.6%	minus	0.3641		
+rs2033654(G;T)			56.6%	minus	0.4862		
+rs3750552(T;T)			56.8%	plus	0.3007		
+rs231725(A;G)			56.9%	plus	0.4518		
+rs9287989(C;T)			56.9%	plus	0.4959		
+rs2749592(G;G)			57.1%	minus			
+rs16845098(T;T)			57.5%	plus	0.2424		
+rs17621444(C;C)			57.5%	plus	0.1593		
+rs2708553(C;C)			57.5%	plus			
+rs6701037(A;C)			57.5%	plus	0.3085		
+rs9728717(T;T)			57.5%	plus	0.2016		
+rs2222447(A;C)			57.5%	minus			
+rs8007267(C;C)			58.0%	plus	0.2874		
+rs13273672(T;T)			58.4%	plus	0.3944		
+rs1930336(G;G)			58.4%	minus			
+rs251421(T;T)			58.4%	minus	0.1584		
+rs4658627(G;G)			58.4%	plus	0.186		
+rs6034368(C;C)			58.4%	plus	0.3182		
+rs9557195(T;T)			58.4%	plus	0.1313		
+rs1534166(A;A)			58.6%	plus	0.2544		
+rs2280964(C;C)			58.7%	plus	0.2733		
+rs1003247(A;A)			59.3%	minus			
+rs10937705(G;G)			59.3%	plus	0.2594		
+rs1549519(A;A)			59.3%	minus	0.4628		
+rs1566045(A;A)			59.3%	minus	0.1419		
+rs259067(G;G)			59.3%	minus			
+rs6672836(T;T)			59.3%	plus	0.3636		
+rs9789535(A;G)			59.3%	plus	0.4118		
+rs5907577(C;C)			59.5%	plus	0.2122		
+rs780(G;G)			59.5%	minus	0.3829		
+rs11145465(C;C)			60.2%	plus	0.1322		
+rs1122401(A;A)			60.2%	minus			
+rs12541(A;A)			60.2%	minus			
+rs1549309(C;C)			60.2%	minus	0.1639		
+rs2060070(G;G)			60.2%	plus	0.3682		
+rs2291897(G;G)			60.2%	minus	0.3205		
+rs329007(A;A)			60.2%	plus			
+rs337656(A;A)			60.2%	minus	0.1612		
+rs3870371(C;C)			60.2%	plus	0.4141		
+rs8074124(T;T)			60.2%	plus	0.3476		
+rs9366816(T;T)			60.2%	plus			
+rs9318552(C;C)			60.7%	plus			
+rs1043607(G;G)			61.1%	plus			
+rs11126936(G;G)			61.1%	plus			
+rs1887582(T;T)			61.1%	minus			
+rs2293968(T;T)			61.1%	minus	0.405		
+rs2919009(G;G)			61.1%	minus	0.1878		
+rs3806325(G;G)			61.1%	minus	0.1042		
+rs467323(A;A)			61.1%	minus	0.4325		
+rs681900(A;A)			61.1%	minus	0.2011		
+rs7166081(A;A)			61.1%	plus	0.3062		
+rs7216064(G;G)			61.1%	plus	0.3287		
+rs10462794(T;T)			61.6%	plus	0.2319		
+rs12676965(T;T)			61.6%	plus	0.1299		
+rs13326165(G;G)			61.9%	plus			
+rs2126642(C;C)			61.9%	minus			
+rs4332358(C;C)			61.9%	plus	0.4555		
+rs638893(T;T)			61.9%	minus	0.2048		
+rs930847(A;A)			61.9%	minus	0.2883		
+rs969962(T;T)			61.9%	plus	0.1529		
+rs10860603(G;G)			62.5%	plus	0.3448		
+rs10829156(C;C)			62.8%	plus	0.1777		
+rs11644034(G;G)			62.8%	plus	0.1488		
+rs2078454(C;C)			62.8%	plus	0.2502		
+rs470089(G;G)			62.8%	plus	0.2034		
+rs7157192(G;G)			62.8%	plus			
+rs7517810(C;C)			62.8%	plus	0.4481		
+rs7795356(C;C)			62.8%	plus	0.1777		
+rs7846606(A;A)			62.8%	plus	0.286		
+rs8056064(A;A)			62.8%	plus	0.2323		
+rs4074961(A;G)			62.8%	minus	0.4279		
+rs1494978(C;C)			63.4%	minus			
+rs10496964(C;C)			63.7%	plus	0.124		
+rs12342831(T;T)			63.7%	plus	0.309		
+rs12472274(G;G)			63.7%	plus	0.2952		
+rs12571964(C;C)			63.7%	plus	0.1635		
+rs12980602(T;T)			63.7%	plus	0.2319		
+rs2449215(T;T)			63.7%	minus			
+rs2946505(C;C)			63.7%	minus	0.281		
+rs6013355(A;A)			63.7%	plus	0.2452		
+rs6547705(A;A)			63.7%	plus	0.1253		
+rs6855088(A;A)			63.7%	plus			
+rs11693697(T;T)			64.3%	plus			
+rs13401104(G;G)			64.6%	plus	0.2048		
+rs1552244(A;A)			64.6%	plus			
+rs2521634(G;G)			64.6%	plus	0.2415		
+rs5764106(T;T)			64.6%	plus	0.4348		
+rs1057510(G;G)			64.9%	plus	0.3067		
+rs1137(C;C)			64.9%	plus	0.4757		
+rs1229982(G;G)			65.5%	plus	0.2287		
+rs1858231(T;T)			65.5%	minus			
+rs4770403(G;G)			65.5%	plus	0.1497		
+rs6773576(G;G)			65.5%	plus	0.1699		
+rs358501(A;A)			66.1%	minus	0.2401		
+rs4802207(T;T)			66.1%	plus	0.4284		
+rs1153831(G;G)			66.4%	plus	0.2039		
+rs11655550(T;T)			66.4%	plus			
+rs12621256(A;A)			66.4%	plus			
+rs17066096(A;A)			66.4%	plus	0.1722		
+rs2282032(G;G)			66.4%	plus	0.1387		
+rs2364403(G;G)			66.4%	plus	0.3848		
+rs2744148(A;A)			66.4%	plus	0.1024		
+rs4304868(G;G)			66.4%	minus	0.1947		
+rs10457525(G;G)			66.7%	plus	0.2314		
+rs10177996(T;T)			67.3%	plus	0.3512		
+rs10429371(T;T)			67.3%	plus	0.3017		
+rs12460587(T;T)			67.3%	plus			
+rs4894535(C;C)			67.3%	plus			
+rs6771316(G;G)			67.3%	plus	0.112		
+rs7128099(A;A)			67.3%	plus	0.4146		
+rs7246657(T;T)			67.3%	plus	0.3067		
+rs948562(T;T)			67.3%	minus	0.1465		
+rs996712(T;T)			67.3%	minus	0.3095		
+rs7224488(C;C)			67.9%	plus			
+rs8028182(G;G)			67.9%	plus	0.3136		
+rs10952132(C;C)			68.1%	plus	0.214		
+rs603424(G;G)			68.1%	plus	0.2815		
+rs9289146(C;C)			68.1%	plus			
+rs9844666(G;G)			68.1%	plus	0.09183		
+rs4141232(T;T)			68.2%	plus	0.1501		
+rs1564892(T;T)			68.8%	minus	0.461		
+rs2416054(C;C)			68.8%	plus	0.2342		
+rs12214600(C;C)			69.0%	plus			
+rs1432723(C;C)			69.0%	minus			
+rs16969816(G;G)			69.0%	plus			
+rs1873386(T;T)			69.0%	minus			
+rs2239464(G;G)			69.0%	plus	0.48		
+rs2835762(C;C)			69.0%	plus	0.09091		
+rs4869931(A;A)			69.0%	plus			
+rs718073(A;A)			69.0%	minus			
+rs7193788(A;A)			69.0%	plus	0.2388		
+rs2186903(G;G)			69.6%	plus	0.2544		
+rs1018361(T;T)			69.9%	plus	0.2888		
+rs12946522(T;T)			69.9%	plus			
+rs1871859(C;C)			69.9%	plus			
+rs2171209(G;G)			69.9%	minus	0.3751		
+rs7092929(C;C)			69.9%	plus	0.3278		
+rs742108(C;C)			69.9%	minus	0.1671		
+rs7586540(A;A)			69.9%	plus	0.08219		
+rs9434741(A;A)			69.9%	plus	0.2635		
+rs6439924(A;A)			70.5%	plus			
+rs12080794(C;C)			70.8%	plus	0.1754		
+rs1902618(A;A)			70.8%	plus	0.2539		
+rs2340727(A;A)			70.8%	plus	0.3095		
+rs289585(A;A)			70.8%	minus	0.101		
+rs738490(G;G)			70.8%	plus	0.1781		
+rs7825208(A;A)			70.8%	plus	0.1708		
+rs8113142(T;T)			70.8%	plus	0.2681		
+rs12483959(G;G)			71.2%	plus	0.2553		
+rs11724903(A;A)			71.4%	plus			
+rs1605834(A;A)			71.4%	plus	0.2585		
+rs7837164(T;T)			71.4%	plus	0.2305		
+rs11001178(T;T)			71.7%	plus	0.343		
+rs11681930(G;G)			71.7%	plus	0.2709		
+rs1483121(C;C)			71.7%	minus	0.05969		
+rs817826(T;T)			71.7%	plus	0.1763		
+rs9459805(A;A)			71.7%	plus			
+rs10476160(A;A)			72.6%	plus	0.3173		
+rs10511378(A;A)			72.6%	minus	0.124		
+rs10861032(T;T)			72.6%	plus	0.2847		
+rs11197571(A;A)			72.6%	plus	0.1152		
+rs11617488(A;A)			72.6%	plus	0.3696		
+rs1550623(T;T)			72.6%	minus	0.1648		
+rs2288884(G;G)			72.6%	minus			
+rs2923084(A;A)			72.6%	plus	0.3618		
+rs7744(A;A)			72.6%	plus	0.1694		
+rs10262995(C;C)			73.2%	plus			
+rs10062929(C;C)			73.5%	plus	0.1107		
+rs10738445(C;C)			73.5%	plus			
+rs10971259(C;C)			73.5%	plus	0.2172		
+rs12221497(G;G)			73.5%	plus	0.1051		
+rs2290149(A;A)			73.5%	minus	0.1038		
+rs2710994(C;C)			73.5%	plus	0.3916		
+rs2801405(T;T)			73.5%	plus	0.2443		
+rs3136685(G;G)			73.5%	minus	0.2847		
+rs4979078(T;T)			73.5%	plus	0.2893		
+rs7159713(A;A)			73.5%	plus			
+rs7518099(T;T)			73.5%	plus	0.09734		
+rs10488764(G;G)			74.1%	plus			
+rs7521681(G;G)			74.1%	plus			
+rs17001868(A;A)			74.3%	plus			
+rs6108160(G;G)			74.3%	plus			
+rs6751349(C;C)			74.3%	plus	0.1483		
+rs7581699(T;T)			74.3%	plus	0.152		
+rs10504473(A;A)			74.8%	plus			
+rs1488665(G;G)			74.8%	plus	0.1933		
+rs10499898(C;C)			75.2%	minus			
+rs11624283(A;A)			75.2%	plus	0.1327		
+rs12979813(A;A)			75.2%	plus	0.2989		
+rs2078371(T;T)			75.2%	plus	0.1267		
+rs4628172(G;G)			75.2%	plus	0.3058		
+rs12282(G;G)			75.4%	minus	0.1019		
+rs1027730(C;C)			75.7%	minus			
+rs10741780(C;C)			75.9%	plus	0.2493		
+rs10484434(G;G)			76.1%	plus	0.08081		
+rs2267138(A;A)			76.1%	plus	0.1745		
+rs2506155(C;C)			76.1%	plus	0.1377		
+rs2753977(A;A)			76.1%	minus	0.1341		
+rs2762932(T;T)			76.1%	plus			
+rs4707795(G;G)			76.1%	plus	0.2287		
+rs6017996(G;G)			76.1%	plus	0.2144		
+rs6573513(C;C)			76.1%	plus			
+rs13382811(C;C)			76.8%	plus	0.2098		
+rs2912600(T;T)			76.8%	minus	0.2718		
+rs3732568(C;C)			76.8%	minus	0.2787		
+rs1472066(A;A)			77.0%	plus			
+rs4737395(A;A)			77.0%	plus	0.1263		
+rs730947(A;A)			77.0%	plus	0.1212		
+rs742134(G;G)			77.0%	plus	0.1217		
+rs9782914(T;T)			77.0%	plus			
+rs2046315(C;C)			77.3%	minus	0.3182		
+rs2710322(G;G)			77.7%	minus	0.14		
+rs10894147(C;C)			77.9%	plus	0.1047		
+rs16869652(G;G)			77.9%	plus	0.09458		
+rs1994816(G;G)			77.9%	plus	0.2782		
+rs2233152(G;G)			77.9%	plus	0.1074		
+rs2239612(C;C)			77.9%	minus	0.2048		
+rs2432143(T;T)			77.9%	plus	0.1134		
+rs2945733(C;C)			77.9%	minus			
+rs664393(G;G)			77.9%	minus			
+rs7286472(A;A)			77.9%	plus			
+rs9947485(C;C)			77.9%	plus			
+rs13106616(G;G)			78.0%	plus	0.2461		
+rs10054504(C;C)			78.8%	plus	0.4155		
+rs10504130(G;G)			78.8%	plus	0.1299		
+rs2926702(A;A)			78.8%	minus	0.1887		
+rs4778214(A;A)			78.8%	plus			
+rs2724509(G;G)			79.6%	plus			
+rs4837864(C;C)			79.6%	plus			
+rs5968205(T;T)			79.6%	plus	0.2449		
+rs6691847(C;C)			79.6%	plus	0.1818		
+rs7602441(G;G)			79.6%	plus	0.2837		
+rs10484939(A;A)			80.0%	minus	0.08356		
+rs7117082(G;G)			80.4%	plus			
+rs10485813(A;A)			80.5%	plus			
+rs10861342(T;T)			80.5%	plus	0.1492		
+rs1334809(G;G)			80.5%	plus	0.2585		
+rs1435879(A;A)			80.5%	plus	0.1676		
+rs1538833(C;C)			80.5%	minus			
+rs16835237(T;T)			80.5%	plus			
+rs2965260(G;G)			80.5%	minus	0.1534		
+rs2967951(G;G)			80.5%	minus	0.3297		
+rs2969540(C;C)			80.5%	plus			
+rs3884558(G;G)			80.5%	plus	0.2984		
+rs703193(C;C)			80.5%	plus	0.2594		
+rs707824(G;G)			80.5%	minus	0.2195		
+rs7604827(T;T)			80.5%	plus	0.1488		
+rs8057939(T;T)			80.5%	plus	0.1827		
+rs2154427(G;G)			81.2%	plus			
+rs10501858(C;C)			81.4%	minus	0.0854		
+rs2272205(T;T)			81.4%	plus	0.1139		
+rs3798696(G;G)			81.4%	minus			
+rs3936340(A;A)			81.4%	minus	0.07668		
+rs590218(A;A)			81.4%	plus	0.2943		
+rs6686886(A;A)			81.4%	plus	0.2466		
+rs6728021(A;A)			81.4%	plus	0.05739		
+rs7138951(A;A)			81.4%	plus			
+rs9883474(C;C)			81.4%	plus	0.1492		
+rs939207(G;G)			81.8%	minus			
+rs9919839(C;C)			82.1%	plus	0.1685		
+rs10512385(A;A)			82.3%	plus	0.1208		
+rs1571500(T;T)			82.3%	plus	0.1258		
+rs17024684(C;C)			82.3%	plus	0.0877		
+rs6735530(T;T)			82.3%	plus			
+rs7144018(T;T)			82.3%	plus	0.258		
+rs2289700(C;C)			83.0%	plus	0.3186		
+rs11039588(C;C)			83.2%	plus	0.09504		
+rs1516489(A;A)			83.2%	plus	0.06566		
+rs724767(C;C)			83.2%	plus	0.1396		
+rs2332267(G;G)			83.9%	minus	0.09183		
+rs744738(C;C)			83.9%	minus			
+rs11671664(G;G)			84.1%	plus	0.1887		
+rs1456669(C;C)			84.1%	plus	0.1566		
+rs1938526(T;T)			84.1%	minus	0.1598		
+rs2501276(G;G)			84.1%	minus	0.06336		
+rs6857559(C;C)			84.1%	plus	0.2842		
+rs6986718(C;C)			84.1%	plus	0.07438		
+rs1341320(T;T)			85.0%	minus			
+rs2032314(C;C)			85.0%	plus	0.1864		
+rs2377339(A;A)			85.0%	plus	0.03765		
+rs3820706(T;T)			85.0%	plus			
+rs3931397(G;G)			85.0%	plus	0.0978		
+rs6538697(T;T)			85.0%	plus	0.1671		
+rs6882716(A;A)			85.0%	plus			
+rs10763642(G;G)			85.8%	plus			
+rs12091371(G;G)			85.8%	plus	0.2268		
+rs13432159(T;T)			85.8%	plus	0.07438		
+rs16902328(T;T)			85.8%	plus			
+rs2994809(C;C)			85.8%	plus	0.1777		
+rs4489787(T;T)			85.8%	plus	0.07346		
+rs974379(A;A)			85.8%	plus	0.2231		
+rs8048207(C;C)			86.5%	plus	0.1506		
+rs2710201(T;T)			86.6%	minus	0.2075		
+rs12236285(G;G)			86.7%	plus			
+rs13381277(A;A)			86.7%	plus	0.0978		
+rs728115(G;G)			86.7%	plus	0.2204		
+rs849230(T;T)			86.7%	minus			
+rs6758152(T;T)			87.4%	plus	0.03306		
+rs10012307(T;T)			87.6%	plus	0.2672		
+rs152439(T;T)			87.6%	plus			
+rs2291841(A;A)			87.6%	plus	0.1616		
+rs4852324(T;T)			87.6%	plus	0.2094		
+rs11013860(A;A)			88.5%	plus			
+rs11683503(T;T)			88.5%	plus			
+rs12044963(G;G)			88.5%	plus	0.2006		
+rs12615435(T;T)			88.5%	plus	0.09917		
+rs16891604(C;C)			88.5%	plus			
+rs16997087(T;T)			88.5%	plus	0.06244		
+rs2116940(A;A)			88.5%	plus	0.2163		
+rs2248663(A;A)			88.5%	minus	0.2328		
+rs2275606(G;G)			88.5%	plus	0.1226		
+rs3760775(C;C)			88.5%	minus	0.1901		
+rs3843552(G;G)			88.5%	plus	0.1873		
+rs3847153(T;T)			88.5%	minus	0.1869		
+rs9312517(A;A)			88.5%	plus			
+rs5751168(C;C)			89.1%	plus	0.1368		
+rs10508558(A;A)			89.4%	plus	0.1488		
+rs10515789(A;A)			89.4%	minus			
+rs12292796(A;A)			89.4%	plus			
+rs7558475(A;A)			89.4%	plus			
+rs10924245(G;G)			89.8%	plus	0.09734		
+rs16924016(C;C)			90.1%	plus			
+rs10248924(C;C)			90.3%	plus			
+rs7512221(T;T)			90.3%	plus			
+rs7632500(A;A)			90.3%	plus			
+rs9320598(A;A)			90.3%	plus	0.2576		
+rs8111998(C;C)			90.8%	plus	0.2218		
+rs13222543(C;C)			91.2%	plus			
+rs1323555(C;C)			91.2%	minus			
+rs17166082(G;G)			91.2%	plus	0.1152		
+rs315553(A;A)			91.2%	minus			
+rs732505(G;G)			91.2%	plus	0.09734		
+rs965972(T;T)			91.2%	minus	0.2094		
+rs11838472(C;C)			92.0%	plus	0.1667		
+rs9371942(A;A)			92.0%	plus			
+rs10268763(G;G)			92.9%	plus			
+rs288979(A;A)			92.9%	plus	0.2222		
+rs304172(G;G)			92.9%	plus	0.09183		
+rs1473500(G;G)			93.8%	minus	0.1722		
+rs17162257(T;T)			93.8%	plus			
+rs311904(C;C)			93.8%	plus	0.2608		
+rs4879926(T;T)			93.8%	plus			
+rs6788895(G;G)			93.8%	plus	0.2314		
+rs7769153(T;T)			93.8%	plus	0.0932		
+rs1429138(C;C)			94.6%	plus	0.09871		
+rs4724055(T;T)			94.7%	plus			
+rs1851024(A;A)			95.5%	plus	0.1006		
+rs7086803(G;G)			95.5%	plus	0.2466		
+rs17023661(C;C)			95.6%	plus			
+rs1943199(C;C)			95.6%	minus			
+rs11135380(G;G)			96.5%	plus			
+rs10836945(C;C)			96.9%	plus	0.2309		
+rs10515260(T;T)			97.3%	plus	0.05556		
+rs11038172(A;A)			98.2%	plus	0.1993		
+rs12580240(A;A)			98.2%	plus	0.1097		
+rs17218161(T;T)			98.5%	plus	0.01837		
+rs17142462(C;C)			99.1%	plus	0.06015		
+rs11256676(A;A)			100.0%	plus	0.1175		
+rs4473559(G;G)			100.0%	plus			
+rs7494275(A;A)			100.0%	plus	0.1428		
+rs7893600(C;C)			100.0%	plus			
+rs8179271(G;G)			100.0%	plus			
+rs1005753(G;G)				minus	0.3797		
+rs1012068(G;T)				minus	0.3411		
+rs1015003(G;G)				minus	0.3733		
+rs1015657(A;A)				minus	0.3659		
+rs1559777(A;G)				minus	0.2769		
+rs166988(C;T)				minus	0.4008		
+rs1800875(G;G)				minus	0.337		
+rs2033214(A;A)				minus			
+rs2039461(C;T)				minus	0.3251		
+rs2045084(C;T)				minus	0.3613		
+rs2055942(C;T)				minus	0.2599		
+rs2292298(A;G)				minus	0.314		
+rs233100(A;G)				minus	0.4279		
+rs254262(A;G)				minus	0.2847		
+rs26949(C;C)				minus	0.3861		
+rs322668(A;G)				minus	0.1699		
+rs352038(A;A)				minus	0.0854		
+rs378363(C;T)				minus	0.1892		
+rs3925075(A;G)				minus	0.4743		
+rs405460(G;T)				minus	0.4192		
+rs469568(A;C)				minus	0.4141		
+rs494459(C;T)				minus	0.405		
+rs505102(T;T)				minus	0.4316		
+rs549438(A;G)				minus	0.3756		
+rs656319(A;G)				minus	0.4128		
+rs7163702(-;-)				minus			
+rs7477(A;C)				minus	0.2792		
+rs7614(C;C)				minus	0.3572		
+rs953741(T;T)				minus	0.1777		
+rs999986(A;C)				minus	0.3062		
+rs225132(A;C)				minus			
+rs4074373(C;T)				minus			
+rs2722769(G;G)			15.9%	plus	0.3269		
+rs923175(G;G)			32.7%	minus	0.4233		
+rs1517114(G;G)			36.3%	plus	0.314		
+rs104669(T;T)			41.6%	minus			
+rs546829(A;A)			41.6%	minus	0.3751		
+rs17668704(A;A)			47.8%	plus	0.2521		
+rs807185(T;T)			49.1%	plus			
+rs9493150(G;G)			49.6%	plus	0.2548		
+rs12049351(C;C)			58.0%	plus	0.225		
+rs1154988(A;A)			63.1%	plus			
+rs10833905(T;T)			67.3%	plus	0.2681		
+rs10875423(A;A)			68.8%	plus			
+rs16882214(C;C)			74.3%	plus	0.1198		
+rs17770015(C;C)			77.9%	plus	0.04913		
+rs2839398(C;C)			77.9%	plus	0.1956		
+rs28305(C;C)			80.5%	minus			
+rs7014762(T;T)				plus			
+rs822585(A;A)				plus			
+rs788016(A;G)	0.0		45.1%	plus	0.3871		
+rs1837253(C;C)	0.0		48.7%	plus	0.3627	normal/common in clinvar	normal/common in clinvar  Found in 56% of all Caucasians on average, this genotype leads to a relative risk of 1.00, which is the most common risk, for late-onset (adult) asthma.
+rs4234853(G;G)	0.0	Good	50.4%	plus	0.1915	common in complete genomics	common in complete genomics
+rs11868035(G;G)	0.0		51.8%	plus	0.4692	normal	normal
+rs1954787(C;T)	0.0		54.9%	plus	0.4679	normal risk	normal risk
+rs243866(G;G)	0.0		57.5%	plus	0.1552		
+rs1933695(G;G)	0.0		61.3%	plus	0.09596		
+rs689466(A;A)	0.0		71.7%	minus	0.2534	normal	normal
+rs4968451(A;A)	0.0	Good	72.6%	plus	0.2516	Normal risk for meningioma	Normal risk for meningioma
+rs9321637(T;T)	0.0	Good	74.3%	plus	0.1391	common in complete genomics	common in complete genomics
+rs17738966(G;G)	0.0		75.0%	plus	0.06657		
+rs10961534(A;A)	0.0	Good	76.1%	plus	0.1878	common in complete genomics	common in complete genomics
+rs17391694(C;C)	0.0	Good	76.1%	plus	0.04362		
+rs1407877(G;G)	0.0	Good	78.8%	minus	0.174	common in complete genomics	common in complete genomics
+rs17503834(T;T)	0.0	Good	80.5%	plus	0.06657	common in complete genomics	common in complete genomics
+rs2607292(G;G)	0.0	Good	81.2%	minus	0.3627	common in complete genomics	common in complete genomics
+rs1000597(A;A)	0.0	Good	81.4%	minus	0.1208	common in complete genomics	common in complete genomics
+rs2252004(G;G)	0.0	Good	81.4%	minus	0.2718	common in complete genomics	common in complete genomics
+rs733724(G;G)	0.0	Good	81.4%	plus	0.04316		
+rs12603284(C;C)	0.0	Good	83.0%	plus	0.2268	common in complete genomics	common in complete genomics
+rs2243248(T;T)	0.0	Good	83.2%	plus	0.09596	common in complete genomics	common in complete genomics
+rs12874278(C;C)	0.0	Good	84.1%	plus	0.05234		
+rs6964415(T;T)	0.0	Good	84.1%	plus	0.1111	common on affy axiom data	common on affy axiom data
+rs1983132(C;C)	0.0	Good	84.7%	plus	0.219		
+rs10754339(A;A)	0.0	Good	85.0%	plus	0.2388	normal	normal
+rs5762311(G;G)	0.0	Good	85.0%	plus	0.2897	common in complete genomics	common in complete genomics
+rs12567209(G;G)	0.0	Good	85.8%	plus	0.1107	common in complete genomics	common in complete genomics
+rs16944141(G;G)	0.0	Good	85.8%	plus	0.146	common in complete genomics	common in complete genomics
+rs494562(T;T)	0.0	Good	85.8%	minus	0.1529	common in complete genomics	common in complete genomics
+rs12489747(G;G)	0.0	Good	87.2%	plus	0.08356	common in complete genomics	common in complete genomics
+rs1424151(T;T)	0.0	Good	87.6%	minus	0.124	common in complete genomics	common in complete genomics
+rs2025934(C;C)	0.0	Good	87.6%	minus	0.01561		
+rs11778329(C;C)	0.0	Good	88.5%	plus	0.06015	common on affy axiom data	common on affy axiom data
+rs2015747(G;G)	0.0	Good	88.5%	minus	0.06566	common in complete genomics	common in complete genomics
+rs2521572(G;G)	0.0	Good	88.5%	plus	0.2199	common in complete genomics	common in complete genomics
+rs6949149(G;G)	0.0	Good	88.5%	plus	0.2631	common in complete genomics	common in complete genomics
+rs649057(G;G)	0.0	Good	89.3%	minus	0.1093		
+rs7530302(G;G)	0.0	Good	89.4%	plus	0.1015	common in complete genomics	common in complete genomics
+rs11215936(G;G)	0.0	Good	90.3%	plus	0.04867	common in complete genomics	common in complete genomics
+rs12035891(A;A)	0.0	Good	90.3%	plus	0.1446	common in complete genomics	common in complete genomics
+rs1206397(C;C)	0.0	Good	90.3%	plus	0.0528		
+rs12467557(A;A)	0.0	Good	90.6%	plus	0.1915	common in complete genomics	common in complete genomics
+rs10508372(G;G)	0.0	Good	91.2%	plus	0.2709	common in complete genomics	common in complete genomics
+rs6013029(G;G)	0.0	Good	92.0%	plus	0.0854	normal	normal
+rs8027714(G;G)	0.0	Good	92.0%	plus	0.08632	common in complete genomics	common in complete genomics
+rs1453560(A;A)	0.0	Good	93.8%	minus	0.07851	common in complete genomics	common in complete genomics
+rs8062326(G;G)	0.0	Good	93.8%	plus	0.04086	common in complete genomics	common in complete genomics
+rs4317882(G;G)	0.0	Good	94.7%	plus	0.1736	common in complete genomics	common in complete genomics
+rs6585436(T;T)	0.0	Good	94.7%	plus	0.04408		
+rs7328278(A;A)	0.0	Good	96.4%	plus	0.09871	common in complete genomics	common in complete genomics
+rs10195263(A;A)	0.0	Good	96.5%	plus	0.04913		
+rs10489759(G;G)	0.0	Good	96.5%	minus	0.157	common in complete genomics	common in complete genomics
+rs710079(C;C)	0.0	Good	96.5%	plus	0.2309	common in complete genomics	common in complete genomics
+rs10494778(A;A)	0.0	Good	97.3%	plus	0.0955	common in complete genomics	common in complete genomics
+rs527430(C;C)	0.0	Good	97.3%	minus	0.04959	common in complete genomics	common in complete genomics
+rs11038167(A;A)	0.0	Good	98.2%	plus	0.1901	common in complete genomics	common in complete genomics
+rs2296840(C;C)	0.0	Good	98.2%	plus	0.1938	common in complete genomics	common in complete genomics
+rs3759223(T;T)	0.0	Good	98.2%	minus	0.08035		
+rs3136687(A;A)	0.0	Good	98.5%	minus	0.1474	common in complete genomics	common in complete genomics
+rs1012620(A;A)	0.0	Good	99.1%	plus	0.1253	common in complete genomics	common in complete genomics
+rs2072054(T;T)	0.0	Good	99.1%	minus	0.2172	common in complete genomics	common in complete genomics
+rs7105056(C;C)	0.0	Good	99.1%	plus	0.04086		
+rs7136572(A;A)	0.0	Good	99.1%	plus	0.1373	common in complete genomics	common in complete genomics
+rs2241524(C;C)	0.0	Good	100.0%	minus	0.1015	normal	normal
+rs4919510(C;C)	0.0	Good	68.1%	plus	0.3466	common in complete genomics	common in complete genomics
+rs2854386(G;G)	0.0	Good	89.2%	minus	0.146	common in complete genomics	common in complete genomics

@@ -1,0 +1,1031 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+<title>Promethease report</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<style type="text/css">
+body {
+font-family: arial, helvetica, sans-serif;
+color: black;
+}
+button {
+border: 1px solid #000000;
+padding: 0px;
+font-size: 4px;
+margin-left: 1px;
+}
+button:hover {
+cursor: pointer;
+color: #ffffff;
+}
+#navmenu {
+background-color: #F0F0F0;
+position:fixed;
+right:5px;
+top:5px;
+border:1px solid black;
+z-index:2;
+}
+#navbox {
+border:1px solid black;
+padding-left: 170px;
+float: right;
+clear: none;
+padding: 0px;
+min-width: 50%;
+max-width: 69%;
+}
+#treeDiv1 {
+max-height:300px;
+overflow: auto;
+background-color: #F0F0F0;
+float:left;
+right:5px;
+top:5px;
+border:1px solid black;
+clear: none;
+min-width: 20%;
+max-width: 30%;
+padding: 0px;
+}
+#expandcontractdiv {
+border:1px dotted #dedede;
+background-color:#EBE4F2;
+margin:0 0 .5em 0;
+padding:0.4em;
+}
+.majorsection {
+float:left;
+width:95%;
+border:1px solid black;
+clear:both;
+margin: 5px 0px;
+padding: 0px 10px;
+}
+.sectiontext {
+clear:both;
+font-size: x-large;
+}
+.boxresult {
+width: inherit;
+margin: 10px auto;
+border: 2px solid grey;
+}
+.boxgoodresult {
+width: inherit;
+margin: 10px auto;
+border: 2px solid #80FF90;
+}
+.boxbadresult {
+width: inherit;
+margin: 10px auto;
+border: 2px solid #FF8080;
+}
+.boxresultcol1 {
+background-color: #FFFFFF;
+float: left;
+width: 190px;
+margin: 0;
+word-wrap: break-word;
+}
+.boxresultcol2 {
+margin-left: 190px;
+}
+.boxlink {
+float:left;
+width:130px;
+}
+.boxfreq {
+float:left;
+width:170px;
+clear:both;
+}
+.boxmag {
+float:left;
+width:170px;
+clear:both;
+}
+.boxrep {
+float:left;
+width:170px;
+clear:both;
+}
+.boxeffect {
+float:left;
+}
+.gsboxeffect {
+float:left;
+clear: none;
+}
+.boxshow {
+float:left;
+width:100px;
+}
+.rstext {
+float:left;
+clear: left;
+background-color: #D0D0FF;
+}
+.diseasebutton {
+margin-left: 20px;
+float:left;
+clear: both;
+}
+.member-Topic {
+margin-left: 40px;
+border:1px solid black;
+clear: both;
+}
+.member-is-a-medical-condition {
+margin-left: 40px;
+border:1px solid black;
+clear: both;
+}
+.member-is-a-medicine {
+margin-left: 40px;
+border:1px solid black;
+clear: both;
+}
+.adiseasebox {
+width: 90%;
+float:left;
+margin-left: 40px;
+clear: both;
+}
+.diseaselink {
+margin-left: 240px;
+FONT-SIZE: 18pt;
+}
+.diseaseinfo {
+margin-left: 650px;
+}
+.boxfooter {
+clear: both;
+margin: 0;
+border-top: 1px solid gray;
+}
+.majorboxfooter {
+clear: both;
+margin: 0;
+border-top: 1px solid gray;
+}
+</style>
+
+<script type="text/javascript">
+function toggle(element) {
+if (document.getElementById(element).style.display == "none") {
+   document.getElementById(element).style.display = "";
+} else {
+   document.getElementById(element).style.display = "none";
+}
+}
+function toggle2(element) {
+if (document.getElementById(element).style.display == "none") {
+   document.getElementById(element).style.display = "";
+   document.getElementById('show-'+element).style.display = "none";
+} else {
+   document.getElementById(element).style.display = "none";
+   document.getElementById('show-'+element).style.display = "";
+}
+}
+function toggle3(name) {
+var e=getElementsByClassName(name);
+for ( var i=0; i < e.length; i++ ) {
+   if (e[i].style.display == "none") {
+       e[i].style.display = "";
+       document.getElementById('show-'+e[i].id).style.display = "none";
+   } else {
+       e[i].style.display = "none";
+       document.getElementById('show-'+e[i].id).style.display = "";
+   }
+}
+}
+
+/*
+
+Need to switch to this cleaner method
+Crockford walkTheDOM http://javascript.crockford.com/hackday.ppt
+
+function walkTheDOM(node, func) {
+
+func(node);
+node = node.firstChild;
+while (node) {
+    walkTheDOM(node, func);
+    node = node.nextSibling;
+}
+
+}
+
+
+function getElementsByClassName(className, node) {
+ var results = [];
+ walkTheDOM(node || document.body, function (node) {
+     var a, c = node.className, i;
+     if (c) {
+         a = c.split(' ');
+         for (i = 0; i < a.length; i += 1) {
+             if (a[i] === className) {
+                  results.push(node);
+                  break;
+              }
+         }
+     }
+ });
+ return results;
+}
+
+
+By now there is a more efficient method, but once upon a time this javascript served well enough
+
+    BEGIN:http://www.robertnyman.com
+    http://www.robertnyman.com/2008/05/27/the-ultimate-getelementsbyclassname-anno-2008/
+    cross platform 'getElementsByClassName'
+    Developed by Robert Nyman, http://www.robertnyman.com
+    Code/licensing: http://code.google.com/p/getelementsbyclassname/
+*/
+var getElementsByClassName = function (className, tag, elm){
+    if (document.getElementsByClassName) {
+            getElementsByClassName = function (className, tag, elm) {
+                    elm = elm || document;
+                    var elements = elm.getElementsByClassName(className),
+                            nodeName = (tag)? new RegExp("\b" + tag + "\b", "i") : null,
+                            returnElements = [],
+                            current;
+                    for(var i=0, il=elements.length; i<il; i+=1){
+                            current = elements[i];
+                            if(!nodeName || nodeName.test(current.nodeName)) {
+                                    returnElements.push(current);
+                            }
+                    }
+                    return returnElements;
+            };
+    }
+    else if (document.evaluate) {
+            getElementsByClassName = function (className, tag, elm) {
+                    tag = tag || "*";
+                    elm = elm || document;
+                    var classes = className.split(" "),
+                            classesToCheck = "",
+                            xhtmlNamespace = "http://www.w3.org/1999/xhtml",
+                            namespaceResolver = (document.documentElement.namespaceURI === xhtmlNamespace)? xhtmlNamespace : null,
+                            returnElements = [],
+                            elements,
+                            node;
+                    for(var j=0, jl=classes.length; j<jl; j+=1){
+                            classesToCheck += "[contains(concat(' ', @class, ' '), ' " + classes[j] + " ')]";
+                    }
+                    try     {
+                            elements = document.evaluate(".//" + tag + classesToCheck, elm, namespaceResolver, 0, null);
+                    }
+                    catch (e) {
+                            elements = document.evaluate(".//" + tag + classesToCheck, elm, null, 0, null);
+                    }
+                    while ((node = elements.iterateNext())) {
+                            returnElements.push(node);
+                    }
+                    return returnElements;
+            };
+    }
+    else {
+            getElementsByClassName = function (className, tag, elm) {
+                    tag = tag || "*";
+                    elm = elm || document;
+                    var classes = className.split(" "),
+                            classesToCheck = [],
+                            elements = (tag === "*" && elm.all)? elm.all : elm.getElementsByTagName(tag),
+                            current,
+                            returnElements = [],
+                            match;
+                    for(var k=0, kl=classes.length; k<kl; k+=1){
+                            classesToCheck.push(new RegExp("(^|\s)" + classes[k] + "(\s|$)"));
+                    }
+                    for(var l=0, ll=elements.length; l<ll; l+=1){
+                            current = elements[l];
+                            match = false;
+                            for(var m=0, ml=classesToCheck.length; m<ml; m+=1){
+                                    match = classesToCheck[
+                                        m].test(current.className);
+                                    if (!match) {
+                                            break;
+                                    }
+                            }
+                            if (match) {
+                                    returnElements.push(current);
+                            }
+                    }
+                    return returnElements;
+            };
+    }
+    return getElementsByClassName(className, tag, elm);
+};
+/*      END:http://www.robertnyman.com */
+
+function ShowEverything(){//we open all of them
+
+var sections = new Array('diseasebox',
+                     'member-is-a-Topic',
+                     'member-is-a-medical-condition',
+                     'member-is-a-medicine',
+                     'rstext',
+                     'boxrstext',
+                     'boxshow',
+                     'boxsection'
+                     );
+
+for ( var i_sect=0; i_sect < sections.length; i_sect++ ) {
+    var e=getElementsByClassName(sections[i_sect]);
+    for ( var i=0; i < e.length; i++ ) {
+        e[i].style.display = '';
+    }
+}
+
+}
+</script>
+</head>
+<body><p>
+<a href="../report.html">main page</a><a name='top'></a>
+<div id='header'>
+<h1><a href='http://www.promethease.com'>Promethease</a> Report</h1>
+<h2>Version: 0.1.164</h2>
+<h2>Generated: 2015-10-26 16:55</h2>
+<h3>Infile: genographic.csv <br>infiles /tmp/tmpC8SJkP</h3><h3>Reference Population CEU</h3><h3>1327 genotypes annotated</h3></div>
+<div id='navmenu'>
+<h3><a href='http://www.snpedia.com/index.php?title=Promethease/results'>Help</a> interpreting your results.</h3>
+<a href="javascript:ShowEverything()">Show Everything</a>
+</div>
+    <div class="majorsection">     <div class='sectiontext'>These are most unique to you, but don't yet have a magnitude assigned </div>
+        <div class='boxshow' id="show-topTen" style="display: none;"><a href="javascript:toggle2('topTen')">...more...</a></div>
+        <div class="boxsection" id="topTen" style="display: inline;"><a href="javascript:toggle2('topTen')">(hide)</a>
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs10429924'>rs10429924</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs10429924(T;T)'>(T;T)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FF0A0A;'>0.0%</span><br/>References:1<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.688953867938" style="display: inline;"><a href="javascript:toggle2('sec-0.688953867938')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.688953867938" style="display: none;"><a href="javascript:toggle2('sec-0.688953867938')">(hide)</a>
+        <div class='rstext'>[GWAS:Schizophrenia]</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs3826782'>rs3826782</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs3826782(T;T)'>(T;T)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FF0A0A;'>0.0%</span><br/>References:1<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.183019238561" style="display: inline;"><a href="javascript:toggle2('sec-0.183019238561')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.183019238561" style="display: none;"><a href="javascript:toggle2('sec-0.183019238561')">(hide)</a>
+        <div class='rstext'>[GWAS:Periodontitis]</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs10519410'>rs10519410</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs10519410(C;C)'>(C;C)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FF7777;'>1.8%</span><br/>References:1<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.996299799184" style="display: inline;"><a href="javascript:toggle2('sec-0.996299799184')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.996299799184" style="display: none;"><a href="javascript:toggle2('sec-0.996299799184')">(hide)</a>
+        <div class='rstext'>[GWAS:Adverse response to radiation therapy]</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs6470517'>rs6470517</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs6470517(G;G)'>(G;G)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FF7777;'>1.8%</span><br/>References:1<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.12864730426" style="display: inline;"><a href="javascript:toggle2('sec-0.12864730426')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.12864730426" style="display: none;"><a href="javascript:toggle2('sec-0.12864730426')">(hide)</a>
+        <div class='rstext'></div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs3786800'>rs3786800</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs3786800(G;G)'>(G;G)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FF7878;'>1.9%</span><br/>References:1<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.553399659512" style="display: inline;"><a href="javascript:toggle2('sec-0.553399659512')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.553399659512" style="display: none;"><a href="javascript:toggle2('sec-0.553399659512')">(hide)</a>
+        <div class='rstext'>[GWAS:Myopia (pathological)]</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs1561927'>rs1561927</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs1561927(G;G)'>(G;G)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FF8787;'>3.5%</span><br/>References:2<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.185183423906" style="display: inline;"><a href="javascript:toggle2('sec-0.185183423906')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.185183423906" style="display: none;"><a href="javascript:toggle2('sec-0.185183423906')">(hide)</a>
+        <div class='rstext'>[GWAS:Type 2 diabetes]</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs205499'>rs205499</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs205499(T;T)'>(T;T)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FF8787;'>3.5%</span><br/>References:1<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.510737115718" style="display: inline;"><a href="javascript:toggle2('sec-0.510737115718')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.510737115718" style="display: none;"><a href="javascript:toggle2('sec-0.510737115718')">(hide)</a>
+        <div class='rstext'></div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs602618'>rs602618</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs602618(C;C)'>(C;C)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FF8787;'>3.5%</span><br/>References:3<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.894164505182" style="display: inline;"><a href="javascript:toggle2('sec-0.894164505182')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.894164505182" style="display: none;"><a href="javascript:toggle2('sec-0.894164505182')">(hide)</a>
+        <div class='rstext'>[PharmGKB:Curated Risk or phenotype-associated allele: A allele. Phenotype: Decreased fasting insulin. Study size: 4681. Study population/ethnicity: Replication study of Swedish control subjects. Significance metric(s): p = 0.001. Type of association: FA; GN.]</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs12204127'>rs12204127</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs12204127(T;T)'>(T;T)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FF8D8D;'>4.4%</span><br/>References:1<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.992648134156" style="display: inline;"><a href="javascript:toggle2('sec-0.992648134156')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.992648134156" style="display: none;"><a href="javascript:toggle2('sec-0.992648134156')">(hide)</a>
+        <div class='rstext'>[GWAS:None]</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs12545109'>rs12545109</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs12545109(A;A)'>(A;A)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FF8D8D;'>4.4%</span><br/>References:1<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.102685136445" style="display: inline;"><a href="javascript:toggle2('sec-0.102685136445')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.102685136445" style="display: none;"><a href="javascript:toggle2('sec-0.102685136445')">(hide)</a>
+        <div class='rstext'>[GWAS:Obesity-related traits]</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs878131'>rs878131</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs878131(T;T)'>(T;T)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FF8D8D;'>4.4%</span><br/>References:1<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.0805431385852" style="display: inline;"><a href="javascript:toggle2('sec-0.0805431385852')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.0805431385852" style="display: none;"><a href="javascript:toggle2('sec-0.0805431385852')">(hide)</a>
+        <div class='rstext'>[GWAS:Thiazide-induced adverse metabolic effects in hypertensive patients]</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs10007052'>rs10007052</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs10007052(A;A)'>(A;A)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FF9292;'>5.3%</span><br/>References:1<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.939773750384" style="display: inline;"><a href="javascript:toggle2('sec-0.939773750384')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.939773750384" style="display: none;"><a href="javascript:toggle2('sec-0.939773750384')">(hide)</a>
+        <div class='rstext'>[GWAS:Chronic obstructive pulmonary disease-related biomarkers]</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs1425902'>rs1425902</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs1425902(G;G)'>(G;G)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FF9292;'>5.3%</span><br/>References:1<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.696375106471" style="display: inline;"><a href="javascript:toggle2('sec-0.696375106471')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.696375106471" style="display: none;"><a href="javascript:toggle2('sec-0.696375106471')">(hide)</a>
+        <div class='rstext'>[GWAS:IgE levels in asthmatics (D.p. specific)]</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs2698530'>rs2698530</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs2698530(C;C)'>(C;C)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FF9696;'>6.2%</span><br/>References:1<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.631470799207" style="display: inline;"><a href="javascript:toggle2('sec-0.631470799207')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.631470799207" style="display: none;"><a href="javascript:toggle2('sec-0.631470799207')">(hide)</a>
+        <div class='rstext'>[GWAS:Iron status biomarkers]</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs478665'>rs478665</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs478665(A;G)'>(A;G)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FF9696;'>6.2%</span><br/>References:1<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.594098008392" style="display: inline;"><a href="javascript:toggle2('sec-0.594098008392')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.594098008392" style="display: none;"><a href="javascript:toggle2('sec-0.594098008392')">(hide)</a>
+        <div class='rstext'>[GWAS:Estradiol plasma levels (breast cancer)]</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs7012413'>rs7012413</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs7012413(T;T)'>(T;T)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FF9696;'>6.2%</span><br/>References:3<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.161987173826" style="display: inline;"><a href="javascript:toggle2('sec-0.161987173826')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.161987173826" style="display: none;"><a href="javascript:toggle2('sec-0.161987173826')">(hide)</a>
+        <div class='rstext'></div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs7932167'>rs7932167</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs7932167(C;C)'>(C;C)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FF9696;'>6.2%</span><br/>References:1<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.672930769004" style="display: inline;"><a href="javascript:toggle2('sec-0.672930769004')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.672930769004" style="display: none;"><a href="javascript:toggle2('sec-0.672930769004')">(hide)</a>
+        <div class='rstext'></div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs11166827'>rs11166827</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs11166827(C;C)'>(C;C)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FF9A9A;'>7.1%</span><br/>References:1<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.228250456752" style="display: inline;"><a href="javascript:toggle2('sec-0.228250456752')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.228250456752" style="display: none;"><a href="javascript:toggle2('sec-0.228250456752')">(hide)</a>
+        <div class='rstext'>[GWAS:Cognitive performance]</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs1806649'>rs1806649</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs1806649(T;T)'>(T;T)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FF9A9A;'>7.1%</span><br/>References:5<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.632667880177" style="display: inline;"><a href="javascript:toggle2('sec-0.632667880177')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.632667880177" style="display: none;"><a href="javascript:toggle2('sec-0.632667880177')">(hide)</a>
+        <div class='rstext'></div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs7515106'>rs7515106</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs7515106(C;C)'>(C;C)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FF9A9A;'>7.1%</span><br/>References:1<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.75258569708" style="display: inline;"><a href="javascript:toggle2('sec-0.75258569708')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.75258569708" style="display: none;"><a href="javascript:toggle2('sec-0.75258569708')">(hide)</a>
+        <div class='rstext'></div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs12750249'>rs12750249</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs12750249(C;C)'>(C;C)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FF9D9D;'>8.0%</span><br/>References:1<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.633995399018" style="display: inline;"><a href="javascript:toggle2('sec-0.633995399018')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.633995399018" style="display: none;"><a href="javascript:toggle2('sec-0.633995399018')">(hide)</a>
+        <div class='rstext'>[GWAS:IgG glycosylation]</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs1317830'>rs1317830</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs1317830(C;C)'>(C;C)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FF9D9D;'>8.0%</span><br/>References:1<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.894509139098" style="display: inline;"><a href="javascript:toggle2('sec-0.894509139098')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.894509139098" style="display: none;"><a href="javascript:toggle2('sec-0.894509139098')">(hide)</a>
+        <div class='rstext'>[GWAS:Body mass index (non-asthmatics)]</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs2148356'>rs2148356</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs2148356(T;T)'>(T;T)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FF9D9D;'>8.0%</span><br/>References:1<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.955551476279" style="display: inline;"><a href="javascript:toggle2('sec-0.955551476279')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.955551476279" style="display: none;"><a href="javascript:toggle2('sec-0.955551476279')">(hide)</a>
+        <div class='rstext'></div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs3853445'>rs3853445</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs3853445(C;C)'>(C;C)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FF9D9D;'>8.0%</span><br/>References:2<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.147741540027" style="display: inline;"><a href="javascript:toggle2('sec-0.147741540027')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.147741540027" style="display: none;"><a href="javascript:toggle2('sec-0.147741540027')">(hide)</a>
+        <div class='rstext'></div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs4954218'>rs4954218</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs4954218(G;G)'>(G;G)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FF9D9D;'>8.0%</span><br/>References:3<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.34205362311" style="display: inline;"><a href="javascript:toggle2('sec-0.34205362311')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.34205362311" style="display: none;"><a href="javascript:toggle2('sec-0.34205362311')">(hide)</a>
+        <div class='rstext'>[GWAS:None]</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs89715'>rs89715</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs89715(T;T)'>(T;T)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FF9D9D;'>8.0%</span><br/>References:1<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.670811840453" style="display: inline;"><a href="javascript:toggle2('sec-0.670811840453')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.670811840453" style="display: none;"><a href="javascript:toggle2('sec-0.670811840453')">(hide)</a>
+        <div class='rstext'></div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs955943'>rs955943</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs955943(A;G)'>(A;G)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FF9D9D;'>8.0%</span><br/>References:1<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.943642821921" style="display: inline;"><a href="javascript:toggle2('sec-0.943642821921')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.943642821921" style="display: none;"><a href="javascript:toggle2('sec-0.943642821921')">(hide)</a>
+        <div class='rstext'>[GWAS:Rhegmatogenous retinal detachment]</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs4507975'>rs4507975</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs4507975(G;G)'>(G;G)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FF9E9E;'>8.1%</span><br/>References:1<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.32838978783" style="display: inline;"><a href="javascript:toggle2('sec-0.32838978783')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.32838978783" style="display: none;"><a href="javascript:toggle2('sec-0.32838978783')">(hide)</a>
+        <div class='rstext'>[GWAS:Venous thromboembolism (gene x gene interaction)]</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs1874165'>rs1874165</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs1874165(C;T)'>(C;T)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FFA0A0;'>8.8%</span><br/>References:1<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.653248889045" style="display: inline;"><a href="javascript:toggle2('sec-0.653248889045')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.653248889045" style="display: none;"><a href="javascript:toggle2('sec-0.653248889045')">(hide)</a>
+        <div class='rstext'></div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs9275698'>rs9275698</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs9275698(G;G)'>(G;G)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FFA1A1;'>8.9%</span><br/>References:2<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.289459411212" style="display: inline;"><a href="javascript:toggle2('sec-0.289459411212')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.289459411212" style="display: none;"><a href="javascript:toggle2('sec-0.289459411212')">(hide)</a>
+        <div class='rstext'>[GWAS:None]</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs16879765'>rs16879765</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs16879765(C;T)'>(C;T)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FFA1A1;'>9.1%</span><br/>References:2<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.239658135676" style="display: inline;"><a href="javascript:toggle2('sec-0.239658135676')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.239658135676" style="display: none;"><a href="javascript:toggle2('sec-0.239658135676')">(hide)</a>
+        <div class='rstext'>[GWAS:None]</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs10486722'>rs10486722</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs10486722(C;C)'>(C;C)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FFA3A3;'>9.7%</span><br/>References:1<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.920315130591" style="display: inline;"><a href="javascript:toggle2('sec-0.920315130591')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.920315130591" style="display: none;"><a href="javascript:toggle2('sec-0.920315130591')">(hide)</a>
+        <div class='rstext'>[GWAS:Pit-and-Fissure caries]</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs10768140'>rs10768140</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs10768140(T;T)'>(T;T)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FFA3A3;'>9.7%</span><br/>References:1<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.748027578534" style="display: inline;"><a href="javascript:toggle2('sec-0.748027578534')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.748027578534" style="display: none;"><a href="javascript:toggle2('sec-0.748027578534')">(hide)</a>
+        <div class='rstext'></div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs1852612'>rs1852612</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs1852612(T;T)'>(T;T)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FFA3A3;'>9.7%</span><br/>References:1<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.758906600111" style="display: inline;"><a href="javascript:toggle2('sec-0.758906600111')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.758906600111" style="display: none;"><a href="javascript:toggle2('sec-0.758906600111')">(hide)</a>
+        <div class='rstext'>[GWAS:QRS duration in tripanosoma cruzi seropositivity]</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs1930146'>rs1930146</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs1930146(C;C)'>(C;C)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FFA3A3;'>9.7%</span><br/>References:1<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.812202928117" style="display: inline;"><a href="javascript:toggle2('sec-0.812202928117')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.812202928117" style="display: none;"><a href="javascript:toggle2('sec-0.812202928117')">(hide)</a>
+        <div class='rstext'></div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs33436'>rs33436</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs33436(T;T)'>(T;T)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FFA3A3;'>9.7%</span><br/>References:1<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.0618618787824" style="display: inline;"><a href="javascript:toggle2('sec-0.0618618787824')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.0618618787824" style="display: none;"><a href="javascript:toggle2('sec-0.0618618787824')">(hide)</a>
+        <div class='rstext'>[GWAS:Obesity-related traits]</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs4258076'>rs4258076</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs4258076(T;T)'>(T;T)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FFA3A3;'>9.7%</span><br/>References:1<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.505333508852" style="display: inline;"><a href="javascript:toggle2('sec-0.505333508852')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.505333508852" style="display: none;"><a href="javascript:toggle2('sec-0.505333508852')">(hide)</a>
+        <div class='rstext'>[GWAS:Cognitive performance]</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs4673301'>rs4673301</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs4673301(C;T)'>(C;T)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FFA3A3;'>9.7%</span><br/>References:1<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.569795292396" style="display: inline;"><a href="javascript:toggle2('sec-0.569795292396')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.569795292396" style="display: none;"><a href="javascript:toggle2('sec-0.569795292396')">(hide)</a>
+        <div class='rstext'>[GWAS:Lung function (forced expiratory volume in 1 second)]</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs467650'>rs467650</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs467650(C;C)'>(C;C)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FFA3A3;'>9.7%</span><br/>References:1<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.0545151498519" style="display: inline;"><a href="javascript:toggle2('sec-0.0545151498519')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.0545151498519" style="display: none;"><a href="javascript:toggle2('sec-0.0545151498519')">(hide)</a>
+        <div class='rstext'>[GWAS:Venous thromboembolism (gene x gene interaction)]</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs730566'>rs730566</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs730566(T;T)'>(T;T)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FFA3A3;'>9.7%</span><br/>References:1<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.0784538159134" style="display: inline;"><a href="javascript:toggle2('sec-0.0784538159134')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.0784538159134" style="display: none;"><a href="javascript:toggle2('sec-0.0784538159134')">(hide)</a>
+        <div class='rstext'>[GWAS:None]</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs12706724'>rs12706724</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs12706724(A;A)'>(A;A)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FFA4A4;'>9.9%</span><br/>References:0<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.297655748687" style="display: inline;"><a href="javascript:toggle2('sec-0.297655748687')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.297655748687" style="display: none;"><a href="javascript:toggle2('sec-0.297655748687')">(hide)</a>
+        <div class='rstext'></div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs2519974'>rs2519974</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs2519974(T;T)'>(T;T)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FFA4A4;'>9.9%</span><br/>References:2<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.728641792679" style="display: inline;"><a href="javascript:toggle2('sec-0.728641792679')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.728641792679" style="display: none;"><a href="javascript:toggle2('sec-0.728641792679')">(hide)</a>
+        <div class='rstext'>[GWAS:Adverse response to chemotherapy (neutropenia/leucopenia) (cyclophosphamide)]</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+</div>     <div class="majorboxfooter"></div>     </div><p><br/></p></body></html>

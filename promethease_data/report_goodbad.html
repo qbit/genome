@@ -1,0 +1,507 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+<title>Promethease report</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<style type="text/css">
+body {
+font-family: arial, helvetica, sans-serif;
+color: black;
+}
+button {
+border: 1px solid #000000;
+padding: 0px;
+font-size: 4px;
+margin-left: 1px;
+}
+button:hover {
+cursor: pointer;
+color: #ffffff;
+}
+#navmenu {
+background-color: #F0F0F0;
+position:fixed;
+right:5px;
+top:5px;
+border:1px solid black;
+z-index:2;
+}
+#navbox {
+border:1px solid black;
+padding-left: 170px;
+float: right;
+clear: none;
+padding: 0px;
+min-width: 50%;
+max-width: 69%;
+}
+#treeDiv1 {
+max-height:300px;
+overflow: auto;
+background-color: #F0F0F0;
+float:left;
+right:5px;
+top:5px;
+border:1px solid black;
+clear: none;
+min-width: 20%;
+max-width: 30%;
+padding: 0px;
+}
+#expandcontractdiv {
+border:1px dotted #dedede;
+background-color:#EBE4F2;
+margin:0 0 .5em 0;
+padding:0.4em;
+}
+.majorsection {
+float:left;
+width:95%;
+border:1px solid black;
+clear:both;
+margin: 5px 0px;
+padding: 0px 10px;
+}
+.sectiontext {
+clear:both;
+font-size: x-large;
+}
+.boxresult {
+width: inherit;
+margin: 10px auto;
+border: 2px solid grey;
+}
+.boxgoodresult {
+width: inherit;
+margin: 10px auto;
+border: 2px solid #80FF90;
+}
+.boxbadresult {
+width: inherit;
+margin: 10px auto;
+border: 2px solid #FF8080;
+}
+.boxresultcol1 {
+background-color: #FFFFFF;
+float: left;
+width: 190px;
+margin: 0;
+word-wrap: break-word;
+}
+.boxresultcol2 {
+margin-left: 190px;
+}
+.boxlink {
+float:left;
+width:130px;
+}
+.boxfreq {
+float:left;
+width:170px;
+clear:both;
+}
+.boxmag {
+float:left;
+width:170px;
+clear:both;
+}
+.boxrep {
+float:left;
+width:170px;
+clear:both;
+}
+.boxeffect {
+float:left;
+}
+.gsboxeffect {
+float:left;
+clear: none;
+}
+.boxshow {
+float:left;
+width:100px;
+}
+.rstext {
+float:left;
+clear: left;
+background-color: #D0D0FF;
+}
+.diseasebutton {
+margin-left: 20px;
+float:left;
+clear: both;
+}
+.member-Topic {
+margin-left: 40px;
+border:1px solid black;
+clear: both;
+}
+.member-is-a-medical-condition {
+margin-left: 40px;
+border:1px solid black;
+clear: both;
+}
+.member-is-a-medicine {
+margin-left: 40px;
+border:1px solid black;
+clear: both;
+}
+.adiseasebox {
+width: 90%;
+float:left;
+margin-left: 40px;
+clear: both;
+}
+.diseaselink {
+margin-left: 240px;
+FONT-SIZE: 18pt;
+}
+.diseaseinfo {
+margin-left: 650px;
+}
+.boxfooter {
+clear: both;
+margin: 0;
+border-top: 1px solid gray;
+}
+.majorboxfooter {
+clear: both;
+margin: 0;
+border-top: 1px solid gray;
+}
+</style>
+
+<script type="text/javascript">
+function toggle(element) {
+if (document.getElementById(element).style.display == "none") {
+   document.getElementById(element).style.display = "";
+} else {
+   document.getElementById(element).style.display = "none";
+}
+}
+function toggle2(element) {
+if (document.getElementById(element).style.display == "none") {
+   document.getElementById(element).style.display = "";
+   document.getElementById('show-'+element).style.display = "none";
+} else {
+   document.getElementById(element).style.display = "none";
+   document.getElementById('show-'+element).style.display = "";
+}
+}
+function toggle3(name) {
+var e=getElementsByClassName(name);
+for ( var i=0; i < e.length; i++ ) {
+   if (e[i].style.display == "none") {
+       e[i].style.display = "";
+       document.getElementById('show-'+e[i].id).style.display = "none";
+   } else {
+       e[i].style.display = "none";
+       document.getElementById('show-'+e[i].id).style.display = "";
+   }
+}
+}
+
+/*
+
+Need to switch to this cleaner method
+Crockford walkTheDOM http://javascript.crockford.com/hackday.ppt
+
+function walkTheDOM(node, func) {
+
+func(node);
+node = node.firstChild;
+while (node) {
+    walkTheDOM(node, func);
+    node = node.nextSibling;
+}
+
+}
+
+
+function getElementsByClassName(className, node) {
+ var results = [];
+ walkTheDOM(node || document.body, function (node) {
+     var a, c = node.className, i;
+     if (c) {
+         a = c.split(' ');
+         for (i = 0; i < a.length; i += 1) {
+             if (a[i] === className) {
+                  results.push(node);
+                  break;
+              }
+         }
+     }
+ });
+ return results;
+}
+
+
+By now there is a more efficient method, but once upon a time this javascript served well enough
+
+    BEGIN:http://www.robertnyman.com
+    http://www.robertnyman.com/2008/05/27/the-ultimate-getelementsbyclassname-anno-2008/
+    cross platform 'getElementsByClassName'
+    Developed by Robert Nyman, http://www.robertnyman.com
+    Code/licensing: http://code.google.com/p/getelementsbyclassname/
+*/
+var getElementsByClassName = function (className, tag, elm){
+    if (document.getElementsByClassName) {
+            getElementsByClassName = function (className, tag, elm) {
+                    elm = elm || document;
+                    var elements = elm.getElementsByClassName(className),
+                            nodeName = (tag)? new RegExp("\b" + tag + "\b", "i") : null,
+                            returnElements = [],
+                            current;
+                    for(var i=0, il=elements.length; i<il; i+=1){
+                            current = elements[i];
+                            if(!nodeName || nodeName.test(current.nodeName)) {
+                                    returnElements.push(current);
+                            }
+                    }
+                    return returnElements;
+            };
+    }
+    else if (document.evaluate) {
+            getElementsByClassName = function (className, tag, elm) {
+                    tag = tag || "*";
+                    elm = elm || document;
+                    var classes = className.split(" "),
+                            classesToCheck = "",
+                            xhtmlNamespace = "http://www.w3.org/1999/xhtml",
+                            namespaceResolver = (document.documentElement.namespaceURI === xhtmlNamespace)? xhtmlNamespace : null,
+                            returnElements = [],
+                            elements,
+                            node;
+                    for(var j=0, jl=classes.length; j<jl; j+=1){
+                            classesToCheck += "[contains(concat(' ', @class, ' '), ' " + classes[j] + " ')]";
+                    }
+                    try     {
+                            elements = document.evaluate(".//" + tag + classesToCheck, elm, namespaceResolver, 0, null);
+                    }
+                    catch (e) {
+                            elements = document.evaluate(".//" + tag + classesToCheck, elm, null, 0, null);
+                    }
+                    while ((node = elements.iterateNext())) {
+                            returnElements.push(node);
+                    }
+                    return returnElements;
+            };
+    }
+    else {
+            getElementsByClassName = function (className, tag, elm) {
+                    tag = tag || "*";
+                    elm = elm || document;
+                    var classes = className.split(" "),
+                            classesToCheck = [],
+                            elements = (tag === "*" && elm.all)? elm.all : elm.getElementsByTagName(tag),
+                            current,
+                            returnElements = [],
+                            match;
+                    for(var k=0, kl=classes.length; k<kl; k+=1){
+                            classesToCheck.push(new RegExp("(^|\s)" + classes[k] + "(\s|$)"));
+                    }
+                    for(var l=0, ll=elements.length; l<ll; l+=1){
+                            current = elements[l];
+                            match = false;
+                            for(var m=0, ml=classesToCheck.length; m<ml; m+=1){
+                                    match = classesToCheck[
+                                        m].test(current.className);
+                                    if (!match) {
+                                            break;
+                                    }
+                            }
+                            if (match) {
+                                    returnElements.push(current);
+                            }
+                    }
+                    return returnElements;
+            };
+    }
+    return getElementsByClassName(className, tag, elm);
+};
+/*      END:http://www.robertnyman.com */
+
+function ShowEverything(){//we open all of them
+
+var sections = new Array('diseasebox',
+                     'member-is-a-Topic',
+                     'member-is-a-medical-condition',
+                     'member-is-a-medicine',
+                     'rstext',
+                     'boxrstext',
+                     'boxshow',
+                     'boxsection'
+                     );
+
+for ( var i_sect=0; i_sect < sections.length; i_sect++ ) {
+    var e=getElementsByClassName(sections[i_sect]);
+    for ( var i=0; i < e.length; i++ ) {
+        e[i].style.display = '';
+    }
+}
+
+}
+</script>
+</head>
+<body><p>
+<a href="../report.html">main page</a><a name='top'></a>
+<div id='header'>
+<h1><a href='http://www.promethease.com'>Promethease</a> Report</h1>
+<h2>Version: 0.1.164</h2>
+<h2>Generated: 2015-10-26 16:55</h2>
+<h3>Infile: genographic.csv <br>infiles /tmp/tmpC8SJkP</h3><h3>Reference Population CEU</h3><h3>1327 genotypes annotated</h3></div>
+<div id='navmenu'>
+<h3><a href='http://www.snpedia.com/index.php?title=Promethease/results'>Help</a> interpreting your results.</h3>
+<a href="javascript:ShowEverything()">Show Everything</a>
+</div>
+    <div class="majorsection">     <div class='sectiontext'>Good news</div>
+        <div class='boxshow' id="show-goodNews" style="display: inline;"><a href="javascript:toggle2('goodNews')">...more...</a></div>
+        <div class="boxsection" id="goodNews" style="display: none;"><a href="javascript:toggle2('goodNews')">(hide)</a>
+
+  <div  class='boxgoodresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs6311'>rs6311</a><a href='http://www.snpedia.com/index.php/rs6311(C;T)'>(C;T)</a></div>
+        <div class='boxmag'>Magnitude: 2<br/>Frequency: <span style='background-color: #FFE1E1;'>52.2%</span><br/>Repute:Good<br/>References:51<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'>Normal risk of sexual dysfunction when taking SSRI Antidepressants.</div>
+        <div class='boxshow' id="show-sec-0.510923912754" style="display: inline;"><a href="javascript:toggle2('sec-0.510923912754')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.510923912754" style="display: none;"><a href="javascript:toggle2('sec-0.510923912754')">(hide)</a>
+        <div class='rstext'>rs6311 (-1438A&gt;G / A-1438G or -1438G&gt;A / G-1438A) is a SNP located upstream (and within the promoter region of) HTR2A. Multiple Regulatory Variants Modulate Expression of 5-Hydroxytryptamine 2A Receptors in Human Cortex. The minor A allele of rs6311 reduces expression of a previously unannotated extension of the 5' untranslated region of HTR2A mRNA. rs6311 together with rs6314 have a modest effect on depression severity, when examined in the Sequenced Treatment Alternatives to Relieve Depression (STAR*D) study. Three (rs643627-rs594242-rs6311: A-C-T), two (rs594242-rs6311: C-T) and a single functional (rs6311: T) marker were protective against suicidal behavior. The complementary markers (rs594242-rs6311: G-C and rs6311: C) were associated with increased risk for non-violent and impu...</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxgoodresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs13149290'>rs13149290</a><a href='http://www.snpedia.com/index.php/rs13149290(T;T)'>(T;T)</a></div>
+        <div class='boxmag'>Magnitude: 1<br/>Frequency: <span style='background-color: #FF0A0A;'>0.0%</span><br/>Repute:Good<br/>References:1<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'>Normal risk of developing prostate cancer</div>
+        <div class='boxshow' id="show-sec-0.268438244701" style="display: inline;"><a href="javascript:toggle2('sec-0.268438244701')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.268438244701" style="display: none;"><a href="javascript:toggle2('sec-0.268438244701')">(hide)</a>
+        <div class='rstext'>rs13149290 is one of seven SNPs found in a combined study of over 1,000 patients to be associated with increased risk for prostate cancer. The risk allele for this SNP is (C); and while the odds ratio was not specifically reported, the probability of false significance (not permuted though) was given as p=2.5 x 10e-5, using a dominant model of risk.</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxgoodresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs3814570'>rs3814570</a><a href='http://www.snpedia.com/index.php/rs3814570(C;C)'>(C;C)</a></div>
+        <div class='boxmag'>Magnitude: 1<br/>Frequency: <span style='background-color: #FFE1E1;'>53.1%</span><br/>Repute:Good<br/>References:0<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'>Normal risk of developing Crohn's disease</div>
+        <div class='boxshow' id="show-sec-0.543315063442" style="display: inline;"><a href="javascript:toggle2('sec-0.543315063442')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.543315063442" style="display: none;"><a href="javascript:toggle2('sec-0.543315063442')">(hide)</a>
+        <div class='rstext'>rs3814570 is a SNP in the transcription factor 7-like 2 (T-cell specific, HMG-box) TCF7L2 gene. A study of 784 Crohn's disease patients with ileal involvement concluded that rs3814570 was associated with increased risk, but not with risk for colonic Crohn's disease or ulcerative colitis. The odds ratio was 1.27 (CI: 1.07 - 1.52, p = 0.00737). Evidence for association between polycystic ovary syndrome (PCOS) and TCF7L2 and glucose intolerance in women with PCOS and TCF7L2.</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxgoodresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs12752888'>rs12752888</a><a href='http://www.snpedia.com/index.php/rs12752888(T;T)'>(T;T)</a></div>
+        <div class='boxmag'>Magnitude: 1<br/>Frequency: <span style='background-color: #FFE3E3;'>54.9%</span><br/>Repute:Good<br/>References:1<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'>Normal progression to Alzheimer&#8217;s disease from mild cognitive impairment.</div>
+        <div class='boxshow' id="show-sec-0.805831693311" style="display: inline;"><a href="javascript:toggle2('sec-0.805831693311')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.805831693311" style="display: none;"><a href="javascript:toggle2('sec-0.805831693311')">(hide)</a>
+        <div class='rstext'>rs12752888 is a SNP on chromosome 1 upstream of the gene ACOT11. ACOT11 has been associated with obesity and is a member of a family of enzymes that help catalyze the de-esterification of fatty acids. One study used genotyping information from 489 patients with mild cognitive impairment (MCI) from the Vitamin E trial. The GWAS employed used Alzheimer&#8217;s disease progression measured quantitatively from Clinical Dementia Rating-sum of boxes (CRD-SB) scores over time. Additionally, the study utilized information about 200 Alzheimer&#8217;s disease patients, 300 MCI patients, and 200 controls from the Alzheimer's Disease Neuroimaging Initiative (ADNI) consortium. Significance was assessed based on the interaction term between genotype and time in a Cox proportional hazards model. rs127528...</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+</div>     <div class="majorboxfooter"></div>     </div><div class="majorsection">     <div class='sectiontext'>Bad news</div>
+        <div class='boxshow' id="show-badNews" style="display: inline;"><a href="javascript:toggle2('badNews')">...more...</a></div>
+        <div class="boxsection" id="badNews" style="display: none;"><a href="javascript:toggle2('badNews')">(hide)</a>
+
+  <div  class='boxbadresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs2073963'>rs2073963</a><a href='http://www.snpedia.com/index.php/rs2073963(G;G)'>(G;G)</a></div>
+        <div class='boxmag'>Magnitude: 2.5<br/>Frequency: <span style='background-color: #FFB1B1;'>15.0%</span><br/>Repute:Bad<br/>References:1<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'>increased risk of baldness</div>
+        <div class='boxshow' id="show-sec-0.627963453122" style="display: inline;"><a href="javascript:toggle2('sec-0.627963453122')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.627963453122" style="display: none;"><a href="javascript:toggle2('sec-0.627963453122')">(hide)</a>
+        <div class='rstext'>Baldness paper from 23andMe June 2012  [GWAS:None]</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxbadresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs10825992'>rs10825992</a><a href='http://www.snpedia.com/index.php/rs10825992(G;T)'>(G;T)</a></div>
+        <div class='boxmag'>Magnitude: 2<br/>Frequency: <span style='background-color: #FFDDDD;'>48.2%</span><br/>Repute:Bad<br/>References:1<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'>increased high myopia risk  Associated with 'high myopia' in French people. 46.3% of people with high myopia had G here, compared to 34.8% of people without high myopia.(table)</div>
+        <div class='boxshow' id="show-sec-0.0770426161867" style="display: inline;"><a href="javascript:toggle2('sec-0.0770426161867')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.0770426161867" style="display: none;"><a href="javascript:toggle2('sec-0.0770426161867')">(hide)</a>
+        <div class='rstext'></div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxbadresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs6036025'>rs6036025</a><a href='http://www.snpedia.com/index.php/rs6036025(G;G)'>(G;G)</a></div>
+        <div class='boxmag'>Magnitude: 1.2<br/>Frequency: <span style='background-color: #FFF6F6;'>84.1%</span><br/>Repute:Bad<br/>References:0<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'>more likely to go bald  more likely to go bald</div>
+        <div class='boxshow' id="show-sec-0.13287128983" style="display: inline;"><a href="javascript:toggle2('sec-0.13287128983')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.13287128983" style="display: none;"><a href="javascript:toggle2('sec-0.13287128983')">(hide)</a>
+        <div class='rstext'>Along with rs201571 serves as a proxy for rs1160312. related to baldness</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+
+  <div  class='boxbadresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs6897876'>rs6897876</a><a href='http://www.snpedia.com/index.php/rs6897876(C;T)'>(C;T)</a></div>
+        <div class='boxmag'>Magnitude: 1.1<br/>Frequency: <span style='background-color: #FFDDDD;'>47.8%</span><br/>Repute:Bad<br/>References:1<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'>3x increased testicular cancer risk for men</div>
+        <div class='boxshow' id="show-sec-0.0851240431089" style="display: inline;"><a href="javascript:toggle2('sec-0.0851240431089')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.0851240431089" style="display: none;"><a href="javascript:toggle2('sec-0.0851240431089')">(hide)</a>
+        <div class='rstext'>Testicular germ cell tumor risk I('TGCT'; i.e. testicular cancer risk) was increased 40% per copy of the major allele (C) at rs4324715 and rs6897876 (OR = 1.37, CI: 1.14&#8211;1.64; OR = 1.39, CI: 1.16&#8211;1.66, respectively), based on a genome-wide scan of 277 primarily Caucasian TGCT cases and 919 controls. Men who have two copies of the common version of the sprouty 4 SPRY4 gene have a 1.5-fold higher risk of testicular cancer than men who have two copies of the less common or minor version of the gene. [doi|10.1038/ng.393]</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+</div>     <div class="majorboxfooter"></div>     </div><div class="majorsection">     <div class='sectiontext'>These seem interesting, but have not been flagged as clearly Good or Bad</div>
+        <div class='boxshow' id="show-withMag" style="display: inline;"><a href="javascript:toggle2('withMag')">...more...</a></div>
+        <div class="boxsection" id="withMag" style="display: none;"><a href="javascript:toggle2('withMag')">(hide)</a>
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs309375'>rs309375</a><a href='http://www.snpedia.com/index.php/rs309375(G;T)'>(G;T)</a></div>
+        <div class='boxmag'>Magnitude: 1.1<br/>Frequency: <span style='background-color: #FFDEDE;'>48.7%</span><br/>References:0<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'>Average mosquito bites</div>
+        <div class='boxshow' id="show-sec-0.637735992132" style="display: inline;"><a href="javascript:toggle2('sec-0.637735992132')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.637735992132" style="display: none;"><a href="javascript:toggle2('sec-0.637735992132')">(hide)</a>
+        <div class='rstext'>http://blog.23andme.com/23andme-research/bug-bite-genetics/ mosquito bite size</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+</div>     <div class="majorboxfooter"></div>     </div><p><br/></p></body></html>

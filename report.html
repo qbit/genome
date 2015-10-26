@@ -1,0 +1,420 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+<title>Promethease report for genographic.csv <br>infiles /tmp/tmpC8SJkP</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<style type="text/css">
+body {
+font-family: arial, helvetica, sans-serif;
+color: black;
+}
+button {
+border: 1px solid #000000;
+padding: 0px;
+font-size: 4px;
+margin-left: 1px;
+}
+button:hover {
+cursor: pointer;
+color: #ffffff;
+}
+#navmenu {
+background-color: #F0F0F0;
+position:fixed;
+right:5px;
+top:5px;
+border:1px solid black;
+z-index:2;
+}
+#navbox {
+border:1px solid black;
+padding-left: 170px;
+float: right;
+clear: none;
+padding: 0px;
+min-width: 50%;
+max-width: 69%;
+}
+#treeDiv1 {
+max-height:300px;
+overflow: auto;
+background-color: #F0F0F0;
+float:left;
+right:5px;
+top:5px;
+border:1px solid black;
+clear: none;
+min-width: 20%;
+max-width: 30%;
+padding: 0px;
+}
+#expandcontractdiv {
+border:1px dotted #dedede;
+background-color:#EBE4F2;
+margin:0 0 .5em 0;
+padding:0.4em;
+}
+.majorsection {
+float:left;
+width:95%;
+border:1px solid black;
+clear:both;
+margin: 5px 0px;
+padding: 0px 10px;
+}
+.sectiontext {
+clear:both;
+font-size: x-large;
+}
+.boxresult {
+width: inherit;
+margin: 10px auto;
+border: 2px solid grey;
+}
+.boxgoodresult {
+width: inherit;
+margin: 10px auto;
+border: 2px solid #80FF90;
+}
+.boxbadresult {
+width: inherit;
+margin: 10px auto;
+border: 2px solid #FF8080;
+}
+.boxresultcol1 {
+background-color: #FFFFFF;
+float: left;
+width: 190px;
+margin: 0;
+word-wrap: break-word;
+}
+.boxresultcol2 {
+margin-left: 190px;
+}
+.boxlink {
+float:left;
+width:130px;
+}
+.boxfreq {
+float:left;
+width:170px;
+clear:both;
+}
+.boxmag {
+float:left;
+width:170px;
+clear:both;
+}
+.boxrep {
+float:left;
+width:170px;
+clear:both;
+}
+.boxeffect {
+float:left;
+}
+.gsboxeffect {
+float:left;
+clear: none;
+}
+.gsboxsummary {
+float:left;
+clear: none;
+font-weight: bold; 
+}
+.boxshow {
+float:left;
+width:100px;
+}
+.rstext {
+float:left;
+clear: left;
+background-color: #D0D0FF;
+}
+.diseasebutton {
+margin-left: 20px;
+float:left;
+clear: both;
+}
+.member-Topic {
+margin-left: 40px;
+border:1px solid black;
+clear: both;
+}
+.member-is-a-medical-condition {
+margin-left: 40px;
+border:1px solid black;
+clear: both;
+}
+.member-is-a-medicine {
+margin-left: 40px;
+border:1px solid black;
+clear: both;
+}
+.adiseasebox {
+width: 90%;
+float:left;
+margin-left: 40px;
+clear: both;
+}
+.diseaselink {
+margin-left: 240px;
+FONT-SIZE: 18pt;
+}
+.diseaseinfo {
+margin-left: 650px;
+}
+.boxfooter {
+clear: both;
+margin: 0;
+border-top: 1px solid gray;
+}
+.majorboxfooter {
+clear: both;
+margin: 0;
+border-top: 1px solid gray;
+}
+</style>
+
+<script type="text/javascript">
+function toggle(element) {
+if (document.getElementById(element).style.display == "none") {
+   document.getElementById(element).style.display = "";
+} else {
+   document.getElementById(element).style.display = "none";
+}
+}
+function toggle2(element) {
+if (document.getElementById(element).style.display == "none") {
+   document.getElementById(element).style.display = "";
+   document.getElementById('show-'+element).style.display = "none";
+} else {
+   document.getElementById(element).style.display = "none";
+   document.getElementById('show-'+element).style.display = "";
+}
+}
+function toggle3(name) {
+var e=getElementsByClassName(name);
+for ( var i=0; i < e.length; i++ ) {
+   if (e[i].style.display == "none") {
+       e[i].style.display = "";
+       document.getElementById('show-'+e[i].id).style.display = "none";
+   } else {
+       e[i].style.display = "none";
+       document.getElementById('show-'+e[i].id).style.display = "";
+   }
+}
+}
+
+/*
+
+Need to switch to this cleaner method
+Crockford walkTheDOM http://javascript.crockford.com/hackday.ppt
+
+function walkTheDOM(node, func) {
+
+func(node);
+node = node.firstChild;
+while (node) {
+    walkTheDOM(node, func);
+    node = node.nextSibling;
+}
+
+}
+
+
+function getElementsByClassName(className, node) {
+ var results = [];
+ walkTheDOM(node || document.body, function (node) {
+     var a, c = node.className, i;
+     if (c) {
+         a = c.split(' ');
+         for (i = 0; i < a.length; i += 1) {
+             if (a[i] === className) {
+                  results.push(node);
+                  break;
+              }
+         }
+     }
+ });
+ return results;
+}
+
+
+By now there is a more efficient method, but once upon a time this javascript served well enough
+
+    BEGIN:http://www.robertnyman.com
+    http://www.robertnyman.com/2008/05/27/the-ultimate-getelementsbyclassname-anno-2008/
+    cross platform 'getElementsByClassName'
+    Developed by Robert Nyman, http://www.robertnyman.com
+    Code/licensing: http://code.google.com/p/getelementsbyclassname/
+*/
+var getElementsByClassName = function (className, tag, elm){
+    if (document.getElementsByClassName) {
+            getElementsByClassName = function (className, tag, elm) {
+                    elm = elm || document;
+                    var elements = elm.getElementsByClassName(className),
+                            nodeName = (tag)? new RegExp("\b" + tag + "\b", "i") : null,
+                            returnElements = [],
+                            current;
+                    for(var i=0, il=elements.length; i<il; i+=1){
+                            current = elements[i];
+                            if(!nodeName || nodeName.test(current.nodeName)) {
+                                    returnElements.push(current);
+                            }
+                    }
+                    return returnElements;
+            };
+    }
+    else if (document.evaluate) {
+            getElementsByClassName = function (className, tag, elm) {
+                    tag = tag || "*";
+                    elm = elm || document;
+                    var classes = className.split(" "),
+                            classesToCheck = "",
+                            xhtmlNamespace = "http://www.w3.org/1999/xhtml",
+                            namespaceResolver = (document.documentElement.namespaceURI === xhtmlNamespace)? xhtmlNamespace : null,
+                            returnElements = [],
+                            elements,
+                            node;
+                    for(var j=0, jl=classes.length; j<jl; j+=1){
+                            classesToCheck += "[contains(concat(' ', @class, ' '), ' " + classes[j] + " ')]";
+                    }
+                    try     {
+                            elements = document.evaluate(".//" + tag + classesToCheck, elm, namespaceResolver, 0, null);
+                    }
+                    catch (e) {
+                            elements = document.evaluate(".//" + tag + classesToCheck, elm, null, 0, null);
+                    }
+                    while ((node = elements.iterateNext())) {
+                            returnElements.push(node);
+                    }
+                    return returnElements;
+            };
+    }
+    else {
+            getElementsByClassName = function (className, tag, elm) {
+                    tag = tag || "*";
+                    elm = elm || document;
+                    var classes = className.split(" "),
+                            classesToCheck = [],
+                            elements = (tag === "*" && elm.all)? elm.all : elm.getElementsByTagName(tag),
+                            current,
+                            returnElements = [],
+                            match;
+                    for(var k=0, kl=classes.length; k<kl; k+=1){
+                            classesToCheck.push(new RegExp("(^|\s)" + classes[k] + "(\s|$)"));
+                    }
+                    for(var l=0, ll=elements.length; l<ll; l+=1){
+                            current = elements[l];
+                            match = false;
+                            for(var m=0, ml=classesToCheck.length; m<ml; m+=1){
+                                    match = classesToCheck[
+                                        m].test(current.className);
+                                    if (!match) {
+                                            break;
+                                    }
+                            }
+                            if (match) {
+                                    returnElements.push(current);
+                            }
+                    }
+                    return returnElements;
+            };
+    }
+    return getElementsByClassName(className, tag, elm);
+};
+/*      END:http://www.robertnyman.com */
+
+function ShowEverything(){//we open all of them
+
+var sections = new Array('diseasebox',
+                     'member-is-a-Topic',
+                     'member-is-a-medical-condition',
+                     'member-is-a-medicine',
+                     'rstext',
+                     'boxrstext',
+                     'boxshow',
+                     'boxsection'
+                     );
+
+for ( var i_sect=0; i_sect < sections.length; i_sect++ ) {
+    var e=getElementsByClassName(sections[i_sect]);
+    for ( var i=0; i < e.length; i++ ) {
+        e[i].style.display = '';
+    }
+}
+
+}
+</script>
+<script type="text/javascript">//<![CDATA[
+
+    function IsDocumentAvailable(url) {
+
+        // http://stackoverflow.com/questions/5163690/check-if-htm-file-exists-on-local-disk-using-javascript
+
+        var fSuccess = false;
+        var client = null;
+
+        // XHR is supported by most browsers.
+        // IE 9 supports it (maybe IE8 and earlier) off webserver
+        // IE running pages off of disk disallows XHR unless security zones are set appropriately. Throws a security exception.
+        // Workaround is to use old ActiveX control on IE (especially for older versions of IE that don't support XHR)
+
+        // FireFox 4 supports XHR (and likely v3 as well) on web and from local disk
+
+        // Works on Chrome, but Chrome doesn't seem to allow XHR from local disk. (Throws a security exception) No workaround known.
+
+        try {
+            client = new XMLHttpRequest();
+            client.open("GET", url, false);
+            client.send();
+        }
+        catch (err) {
+            client = null;
+        }
+
+        // Try the ActiveX control if available
+        if (client === null) {
+            try {
+                client = new ActiveXObject("Microsoft.XMLHTTP");
+                client.open("GET", url, false);
+                client.send();
+            }
+            catch (err) {
+                // Giving up, nothing we can do
+                client = null;
+            }
+        }
+
+        fSuccess = Boolean(client && client.responseText);
+
+        return fSuccess;
+    }
+
+//   window.onload = function(e){
+//     var is_chrome = window.chrome;
+//     if (!is_chrome) {
+//       var found_subdir = IsDocumentAvailable("promethease_data/ui2libs/promethease.tooltip.css");
+//       if (!found_subdir) {
+//          alert("Error. It looks like you may have gone into the .zip file, without actually unzipping it.\n\nAs a result I cannot link to your subreports about Medicines, Medical Conditions, or UI2.\n\nYou need to really unzip the file for the full report to work.\n\nMore information at\nhttp://snpedia.com/index.php/Unzipping");
+//       }
+//     }
+//   }
+
+//]]></script>
+
+</head>
+<body><p>
+<a name='top'></a>
+<div id='header'>
+<h1><a href='http://www.promethease.com'>Promethease</a> Report</h1>
+<h2>Version: 0.1.164</h2>
+<h2>Generated: 2015-10-26 16:54</h2>
+<h3>Infile: genographic.csv <br>infiles /tmp/tmpC8SJkP</h3><h3>Reference Population CEU</h3><h3>1327 genotypes annotated</h3></div><div class="majorsection"><a href="promethease_data/report_ui2.html">UI version 2</a> interactive report</div><div class="majorsection"><a href="promethease_data/report_goodbad.html">Good / Bad / Interesting</a> overly simplified report</div><div class="majorsection"><a href="promethease_data/report_is-a-medicine.html">Medicines</a></div><div class="majorsection"><a href="promethease_data/report_is-a-medical-condition.html">Medical Conditions</a></div><div class="majorsection"><a href="promethease_data/report_Topic.html">Topics</a></div><div class="majorsection"><a href="promethease_data/report_top10.html">Top 10%</a> somewhat rare in your chosen population (CEU)</div><div class="majorsection"><a href="promethease_data/report_tagcloud.html">Tag cloud</a> highlights notable terms which occur in this report</div><div class="majorsection"><a href="promethease_data/report_Tab.txt">Tab delimited version</a> of your report should be easy to open with Excel</div><div class="majorsection"><a href="promethease_data/report_settings.xml">XML Settings</a></div><p><br/></p>
+  <br clear="all">
+  <p><i>
+    If you are unable to open the reports above, please read about
+    <a href="http://www.snpedia.com/index.php/Talk:Promethease#Fails_to_Open_Some_Report_Sections">how to unzip</a>.
+</i>    </p>
+</body></html>

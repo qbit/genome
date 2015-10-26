@@ -1,0 +1,359 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+<title>Promethease report</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<style type="text/css">
+body {
+font-family: arial, helvetica, sans-serif;
+color: black;
+}
+button {
+border: 1px solid #000000;
+padding: 0px;
+font-size: 4px;
+margin-left: 1px;
+}
+button:hover {
+cursor: pointer;
+color: #ffffff;
+}
+#navmenu {
+background-color: #F0F0F0;
+position:fixed;
+right:5px;
+top:5px;
+border:1px solid black;
+z-index:2;
+}
+#navbox {
+border:1px solid black;
+padding-left: 170px;
+float: right;
+clear: none;
+padding: 0px;
+min-width: 50%;
+max-width: 69%;
+}
+#treeDiv1 {
+max-height:300px;
+overflow: auto;
+background-color: #F0F0F0;
+float:left;
+right:5px;
+top:5px;
+border:1px solid black;
+clear: none;
+min-width: 20%;
+max-width: 30%;
+padding: 0px;
+}
+#expandcontractdiv {
+border:1px dotted #dedede;
+background-color:#EBE4F2;
+margin:0 0 .5em 0;
+padding:0.4em;
+}
+.majorsection {
+float:left;
+width:95%;
+border:1px solid black;
+clear:both;
+margin: 5px 0px;
+padding: 0px 10px;
+}
+.sectiontext {
+clear:both;
+font-size: x-large;
+}
+.boxresult {
+width: inherit;
+margin: 10px auto;
+border: 2px solid grey;
+}
+.boxgoodresult {
+width: inherit;
+margin: 10px auto;
+border: 2px solid #80FF90;
+}
+.boxbadresult {
+width: inherit;
+margin: 10px auto;
+border: 2px solid #FF8080;
+}
+.boxresultcol1 {
+background-color: #FFFFFF;
+float: left;
+width: 190px;
+margin: 0;
+word-wrap: break-word;
+}
+.boxresultcol2 {
+margin-left: 190px;
+}
+.boxlink {
+float:left;
+width:130px;
+}
+.boxfreq {
+float:left;
+width:170px;
+clear:both;
+}
+.boxmag {
+float:left;
+width:170px;
+clear:both;
+}
+.boxrep {
+float:left;
+width:170px;
+clear:both;
+}
+.boxeffect {
+float:left;
+}
+.gsboxeffect {
+float:left;
+clear: none;
+}
+.boxshow {
+float:left;
+width:100px;
+}
+.rstext {
+float:left;
+clear: left;
+background-color: #D0D0FF;
+}
+.diseasebutton {
+margin-left: 20px;
+float:left;
+clear: both;
+}
+.member-Topic {
+margin-left: 40px;
+border:1px solid black;
+clear: both;
+}
+.member-is-a-medical-condition {
+margin-left: 40px;
+border:1px solid black;
+clear: both;
+}
+.member-is-a-medicine {
+margin-left: 40px;
+border:1px solid black;
+clear: both;
+}
+.adiseasebox {
+width: 90%;
+float:left;
+margin-left: 40px;
+clear: both;
+}
+.diseaselink {
+margin-left: 240px;
+FONT-SIZE: 18pt;
+}
+.diseaseinfo {
+margin-left: 650px;
+}
+.boxfooter {
+clear: both;
+margin: 0;
+border-top: 1px solid gray;
+}
+.majorboxfooter {
+clear: both;
+margin: 0;
+border-top: 1px solid gray;
+}
+</style>
+
+<script type="text/javascript">
+function toggle(element) {
+if (document.getElementById(element).style.display == "none") {
+   document.getElementById(element).style.display = "";
+} else {
+   document.getElementById(element).style.display = "none";
+}
+}
+function toggle2(element) {
+if (document.getElementById(element).style.display == "none") {
+   document.getElementById(element).style.display = "";
+   document.getElementById('show-'+element).style.display = "none";
+} else {
+   document.getElementById(element).style.display = "none";
+   document.getElementById('show-'+element).style.display = "";
+}
+}
+function toggle3(name) {
+var e=getElementsByClassName(name);
+for ( var i=0; i < e.length; i++ ) {
+   if (e[i].style.display == "none") {
+       e[i].style.display = "";
+       document.getElementById('show-'+e[i].id).style.display = "none";
+   } else {
+       e[i].style.display = "none";
+       document.getElementById('show-'+e[i].id).style.display = "";
+   }
+}
+}
+
+/*
+
+Need to switch to this cleaner method
+Crockford walkTheDOM http://javascript.crockford.com/hackday.ppt
+
+function walkTheDOM(node, func) {
+
+func(node);
+node = node.firstChild;
+while (node) {
+    walkTheDOM(node, func);
+    node = node.nextSibling;
+}
+
+}
+
+
+function getElementsByClassName(className, node) {
+ var results = [];
+ walkTheDOM(node || document.body, function (node) {
+     var a, c = node.className, i;
+     if (c) {
+         a = c.split(' ');
+         for (i = 0; i < a.length; i += 1) {
+             if (a[i] === className) {
+                  results.push(node);
+                  break;
+              }
+         }
+     }
+ });
+ return results;
+}
+
+
+By now there is a more efficient method, but once upon a time this javascript served well enough
+
+    BEGIN:http://www.robertnyman.com
+    http://www.robertnyman.com/2008/05/27/the-ultimate-getelementsbyclassname-anno-2008/
+    cross platform 'getElementsByClassName'
+    Developed by Robert Nyman, http://www.robertnyman.com
+    Code/licensing: http://code.google.com/p/getelementsbyclassname/
+*/
+var getElementsByClassName = function (className, tag, elm){
+    if (document.getElementsByClassName) {
+            getElementsByClassName = function (className, tag, elm) {
+                    elm = elm || document;
+                    var elements = elm.getElementsByClassName(className),
+                            nodeName = (tag)? new RegExp("\b" + tag + "\b", "i") : null,
+                            returnElements = [],
+                            current;
+                    for(var i=0, il=elements.length; i<il; i+=1){
+                            current = elements[i];
+                            if(!nodeName || nodeName.test(current.nodeName)) {
+                                    returnElements.push(current);
+                            }
+                    }
+                    return returnElements;
+            };
+    }
+    else if (document.evaluate) {
+            getElementsByClassName = function (className, tag, elm) {
+                    tag = tag || "*";
+                    elm = elm || document;
+                    var classes = className.split(" "),
+                            classesToCheck = "",
+                            xhtmlNamespace = "http://www.w3.org/1999/xhtml",
+                            namespaceResolver = (document.documentElement.namespaceURI === xhtmlNamespace)? xhtmlNamespace : null,
+                            returnElements = [],
+                            elements,
+                            node;
+                    for(var j=0, jl=classes.length; j<jl; j+=1){
+                            classesToCheck += "[contains(concat(' ', @class, ' '), ' " + classes[j] + " ')]";
+                    }
+                    try     {
+                            elements = document.evaluate(".//" + tag + classesToCheck, elm, namespaceResolver, 0, null);
+                    }
+                    catch (e) {
+                            elements = document.evaluate(".//" + tag + classesToCheck, elm, null, 0, null);
+                    }
+                    while ((node = elements.iterateNext())) {
+                            returnElements.push(node);
+                    }
+                    return returnElements;
+            };
+    }
+    else {
+            getElementsByClassName = function (className, tag, elm) {
+                    tag = tag || "*";
+                    elm = elm || document;
+                    var classes = className.split(" "),
+                            classesToCheck = [],
+                            elements = (tag === "*" && elm.all)? elm.all : elm.getElementsByTagName(tag),
+                            current,
+                            returnElements = [],
+                            match;
+                    for(var k=0, kl=classes.length; k<kl; k+=1){
+                            classesToCheck.push(new RegExp("(^|\s)" + classes[k] + "(\s|$)"));
+                    }
+                    for(var l=0, ll=elements.length; l<ll; l+=1){
+                            current = elements[l];
+                            match = false;
+                            for(var m=0, ml=classesToCheck.length; m<ml; m+=1){
+                                    match = classesToCheck[
+                                        m].test(current.className);
+                                    if (!match) {
+                                            break;
+                                    }
+                            }
+                            if (match) {
+                                    returnElements.push(current);
+                            }
+                    }
+                    return returnElements;
+            };
+    }
+    return getElementsByClassName(className, tag, elm);
+};
+/*      END:http://www.robertnyman.com */
+
+function ShowEverything(){//we open all of them
+
+var sections = new Array('diseasebox',
+                     'member-is-a-Topic',
+                     'member-is-a-medical-condition',
+                     'member-is-a-medicine',
+                     'rstext',
+                     'boxrstext',
+                     'boxshow',
+                     'boxsection'
+                     );
+
+for ( var i_sect=0; i_sect < sections.length; i_sect++ ) {
+    var e=getElementsByClassName(sections[i_sect]);
+    for ( var i=0; i < e.length; i++ ) {
+        e[i].style.display = '';
+    }
+}
+
+}
+</script>
+</head>
+<body><p>
+<a href="../report.html">main page</a><a name='top'></a>
+<div id='header'>
+<h1><a href='http://www.promethease.com'>Promethease</a> Report</h1>
+<h2>Version: 0.1.164</h2>
+<h2>Generated: 2015-10-26 16:55</h2>
+<h3>Infile: genographic.csv <br>infiles /tmp/tmpC8SJkP</h3><h3>Reference Population CEU</h3><h3>1327 genotypes annotated</h3></div>
+<div id='navmenu'>
+<h3><a href='http://www.snpedia.com/index.php?title=Promethease/results'>Help</a> interpreting your results.</h3>
+<a href="javascript:ShowEverything()">Show Everything</a>
+</div>
+    <div class="majorsection">     <div class='sectiontext'>This 'tag cloud' tries to highlight notable terms which occur in this report.</div>
+        <div class='boxshow' id="show-tagCloud" style="display: none;"><a href="javascript:toggle2('tagCloud')">...more...</a></div>
+        <div class="boxsection" id="tagCloud" style="display: inline;"><a href="javascript:toggle2('tagCloud')">(hide)</a><span style="font-size:57%">3x</span> <span style="font-size:51%">Alzheimer</span> <span style="font-size:101%">Antidepressants</span> <span style="font-size:80%">arthritis</span> <span style="font-size:141%">Associated</span> <span style="font-size:57%">Average</span> <span style="font-size:114%">bald</span> <span style="font-size:132%">baldness</span> <span style="font-size:80%">better</span> <span style="font-size:57%">bites</span> <span style="font-size:104%">cancer</span> <span style="font-size:51%">cognitive</span> <span style="font-size:51%">common</span> <span style="font-size:101%">compared</span> <span style="font-size:51%">content</span> <span style="font-size:117%">Crohn</span> <span style="font-size:101%">developing</span> <span style="font-size:141%">disease</span> <span style="font-size:101%">dysfunction</span> <span style="font-size:51%">expansion</span> <span style="font-size:101%">French</span> <span style="font-size:51%">from</span> <span style="font-size:114%">go</span> <span style="font-size:80%">Greater</span> <span style="font-size:101%">had</span> <span style="font-size:101%">here</span> <span style="font-size:200%">high</span> <span style="font-size:51%">impairment</span> <span style="font-size:80%">inflammatory</span> <span style="font-size:51%">iovs</span> <span style="font-size:80%">malaria</span> <span style="font-size:57%">men</span> <span style="font-size:51%">mild</span> <span style="font-size:30%">Mixed</span> <span style="font-size:114%">more</span> <span style="font-size:57%">mosquito</span> <span style="font-size:200%">myopia</span> <span style="font-size:130%">outcomes</span> <span style="font-size:130%">patients</span> <span style="font-size:180%">people</span> <span style="font-size:51%">progression</span> <span style="font-size:51%">prostate</span> <span style="font-size:80%">response</span> <span style="font-size:80%">rheumatoid</span> <span style="font-size:141%">s</span> <span style="font-size:101%">sexual</span> <span style="font-size:101%">SSRI</span> <span style="font-size:51%">T1</span> <span style="font-size:101%">table</span> <span style="font-size:101%">taking</span> <span style="font-size:57%">testicular</span> <span style="font-size:101%">when</span> <span style="font-size:80%">worse</span></div>     <div class="majorboxfooter"></div>     </div><p><br/></p></body></html>

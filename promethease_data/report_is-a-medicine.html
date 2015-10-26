@@ -1,0 +1,446 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+<title>Promethease is-a-medicine</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<style type="text/css">
+body {
+font-family: arial, helvetica, sans-serif;
+color: black;
+}
+button {
+border: 1px solid #000000;
+padding: 0px;
+font-size: 4px;
+margin-left: 1px;
+}
+button:hover {
+cursor: pointer;
+color: #ffffff;
+}
+#navmenu {
+background-color: #F0F0F0;
+position:fixed;
+right:5px;
+top:5px;
+border:1px solid black;
+z-index:2;
+}
+#navbox {
+border:1px solid black;
+padding-left: 170px;
+float: right;
+clear: none;
+padding: 0px;
+min-width: 50%;
+max-width: 69%;
+}
+#treeDiv1 {
+max-height:300px;
+overflow: auto;
+background-color: #F0F0F0;
+float:left;
+right:5px;
+top:5px;
+border:1px solid black;
+clear: none;
+min-width: 20%;
+max-width: 30%;
+padding: 0px;
+}
+#expandcontractdiv {
+border:1px dotted #dedede;
+background-color:#EBE4F2;
+margin:0 0 .5em 0;
+padding:0.4em;
+}
+.majorsection {
+float:left;
+width:95%;
+border:1px solid black;
+clear:both;
+margin: 5px 0px;
+padding: 0px 10px;
+}
+.sectiontext {
+clear:both;
+font-size: x-large;
+}
+.boxresult {
+width: inherit;
+margin: 10px auto;
+border: 2px solid grey;
+}
+.boxgoodresult {
+width: inherit;
+margin: 10px auto;
+border: 2px solid #80FF90;
+}
+.boxbadresult {
+width: inherit;
+margin: 10px auto;
+border: 2px solid #FF8080;
+}
+.boxresultcol1 {
+background-color: #FFFFFF;
+float: left;
+width: 190px;
+margin: 0;
+word-wrap: break-word;
+}
+.boxresultcol2 {
+margin-left: 190px;
+}
+.boxlink {
+float:left;
+width:130px;
+}
+.boxfreq {
+float:left;
+width:170px;
+clear:both;
+}
+.boxmag {
+float:left;
+width:170px;
+clear:both;
+}
+.boxrep {
+float:left;
+width:170px;
+clear:both;
+}
+.boxeffect {
+float:left;
+}
+.gsboxeffect {
+float:left;
+clear: none;
+}
+.boxshow {
+float:left;
+width:100px;
+}
+.rstext {
+float:left;
+clear: left;
+background-color: #D0D0FF;
+}
+.diseasebutton {
+margin-left: 20px;
+float:left;
+clear: both;
+}
+.member-Topic {
+margin-left: 40px;
+border:1px solid black;
+clear: both;
+}
+.member-is-a-medical-condition {
+margin-left: 40px;
+border:1px solid black;
+clear: both;
+}
+.member-is-a-medicine {
+margin-left: 40px;
+border:1px solid black;
+clear: both;
+}
+.adiseasebox {
+width: 90%;
+float:left;
+margin-left: 40px;
+clear: both;
+}
+.diseaselink {
+margin-left: 240px;
+FONT-SIZE: 18pt;
+}
+.diseaseinfo {
+margin-left: 650px;
+}
+.boxfooter {
+clear: both;
+margin: 0;
+border-top: 1px solid gray;
+}
+.majorboxfooter {
+clear: both;
+margin: 0;
+border-top: 1px solid gray;
+}
+</style>
+
+<script type="text/javascript">
+function toggle(element) {
+if (document.getElementById(element).style.display == "none") {
+   document.getElementById(element).style.display = "";
+} else {
+   document.getElementById(element).style.display = "none";
+}
+}
+function toggle2(element) {
+if (document.getElementById(element).style.display == "none") {
+   document.getElementById(element).style.display = "";
+   document.getElementById('show-'+element).style.display = "none";
+} else {
+   document.getElementById(element).style.display = "none";
+   document.getElementById('show-'+element).style.display = "";
+}
+}
+function toggle3(name) {
+var e=getElementsByClassName(name);
+for ( var i=0; i < e.length; i++ ) {
+   if (e[i].style.display == "none") {
+       e[i].style.display = "";
+       document.getElementById('show-'+e[i].id).style.display = "none";
+   } else {
+       e[i].style.display = "none";
+       document.getElementById('show-'+e[i].id).style.display = "";
+   }
+}
+}
+
+/*
+
+Need to switch to this cleaner method
+Crockford walkTheDOM http://javascript.crockford.com/hackday.ppt
+
+function walkTheDOM(node, func) {
+
+func(node);
+node = node.firstChild;
+while (node) {
+    walkTheDOM(node, func);
+    node = node.nextSibling;
+}
+
+}
+
+
+function getElementsByClassName(className, node) {
+ var results = [];
+ walkTheDOM(node || document.body, function (node) {
+     var a, c = node.className, i;
+     if (c) {
+         a = c.split(' ');
+         for (i = 0; i < a.length; i += 1) {
+             if (a[i] === className) {
+                  results.push(node);
+                  break;
+              }
+         }
+     }
+ });
+ return results;
+}
+
+
+By now there is a more efficient method, but once upon a time this javascript served well enough
+
+    BEGIN:http://www.robertnyman.com
+    http://www.robertnyman.com/2008/05/27/the-ultimate-getelementsbyclassname-anno-2008/
+    cross platform 'getElementsByClassName'
+    Developed by Robert Nyman, http://www.robertnyman.com
+    Code/licensing: http://code.google.com/p/getelementsbyclassname/
+*/
+var getElementsByClassName = function (className, tag, elm){
+    if (document.getElementsByClassName) {
+            getElementsByClassName = function (className, tag, elm) {
+                    elm = elm || document;
+                    var elements = elm.getElementsByClassName(className),
+                            nodeName = (tag)? new RegExp("\b" + tag + "\b", "i") : null,
+                            returnElements = [],
+                            current;
+                    for(var i=0, il=elements.length; i<il; i+=1){
+                            current = elements[i];
+                            if(!nodeName || nodeName.test(current.nodeName)) {
+                                    returnElements.push(current);
+                            }
+                    }
+                    return returnElements;
+            };
+    }
+    else if (document.evaluate) {
+            getElementsByClassName = function (className, tag, elm) {
+                    tag = tag || "*";
+                    elm = elm || document;
+                    var classes = className.split(" "),
+                            classesToCheck = "",
+                            xhtmlNamespace = "http://www.w3.org/1999/xhtml",
+                            namespaceResolver = (document.documentElement.namespaceURI === xhtmlNamespace)? xhtmlNamespace : null,
+                            returnElements = [],
+                            elements,
+                            node;
+                    for(var j=0, jl=classes.length; j<jl; j+=1){
+                            classesToCheck += "[contains(concat(' ', @class, ' '), ' " + classes[j] + " ')]";
+                    }
+                    try     {
+                            elements = document.evaluate(".//" + tag + classesToCheck, elm, namespaceResolver, 0, null);
+                    }
+                    catch (e) {
+                            elements = document.evaluate(".//" + tag + classesToCheck, elm, null, 0, null);
+                    }
+                    while ((node = elements.iterateNext())) {
+                            returnElements.push(node);
+                    }
+                    return returnElements;
+            };
+    }
+    else {
+            getElementsByClassName = function (className, tag, elm) {
+                    tag = tag || "*";
+                    elm = elm || document;
+                    var classes = className.split(" "),
+                            classesToCheck = [],
+                            elements = (tag === "*" && elm.all)? elm.all : elm.getElementsByTagName(tag),
+                            current,
+                            returnElements = [],
+                            match;
+                    for(var k=0, kl=classes.length; k<kl; k+=1){
+                            classesToCheck.push(new RegExp("(^|\s)" + classes[k] + "(\s|$)"));
+                    }
+                    for(var l=0, ll=elements.length; l<ll; l+=1){
+                            current = elements[l];
+                            match = false;
+                            for(var m=0, ml=classesToCheck.length; m<ml; m+=1){
+                                    match = classesToCheck[
+                                        m].test(current.className);
+                                    if (!match) {
+                                            break;
+                                    }
+                            }
+                            if (match) {
+                                    returnElements.push(current);
+                            }
+                    }
+                    return returnElements;
+            };
+    }
+    return getElementsByClassName(className, tag, elm);
+};
+/*      END:http://www.robertnyman.com */
+
+function ShowEverything(){//we open all of them
+
+var sections = new Array('diseasebox',
+                     'member-is-a-Topic',
+                     'member-is-a-medical-condition',
+                     'member-is-a-medicine',
+                     'rstext',
+                     'boxrstext',
+                     'boxshow',
+                     'boxsection'
+                     );
+
+for ( var i_sect=0; i_sect < sections.length; i_sect++ ) {
+    var e=getElementsByClassName(sections[i_sect]);
+    for ( var i=0; i < e.length; i++ ) {
+        e[i].style.display = '';
+    }
+}
+
+}
+</script>
+</head>
+<body><p>
+<a href="../report.html">main page</a><a name='top'></a>
+<div id='header'>
+<h1><a href='http://www.promethease.com'>Promethease</a> Report</h1>
+<h2>Version: 0.1.164</h2>
+<h2>Generated: 2015-10-26 16:55</h2>
+<h3>Infile: genographic.csv <br>infiles /tmp/tmpC8SJkP</h3><h3>Reference Population CEU</h3><h3>1327 genotypes annotated</h3></div>
+<div id='navmenu'>
+<h3><a href='http://www.snpedia.com/index.php?title=Promethease/results'>Help</a> interpreting your results.</h3>
+<a href="javascript:ShowEverything()">Show Everything</a>
+</div>
+    <div class="majorsection">
+     <div class='sectiontext'>Medicines</div>
+
+        <div class='boxshow' id="show-is-a-medicine" style="display: none;"><a href="javascript:toggle2('is-a-medicine')">...more...</a></div>
+        <div class="boxsection" id="is-a-medicine" style="display: inline;"><a href="javascript:toggle2('is-a-medicine')">(hide)</a>
+<div id="block-is-a-medicine" class="diseasebox" style="display: inline;">
+<a href="javascript:toggle3('member-is-a-medicine')">(toggle all)</a>
+  <div class='adiseasebox'>
+
+  <a class='diseasebutton'><img src="http://chart.googleapis.com/chart?chbh=a&chs=100x10&cht=bhs&chco=80FF90,DADADA,FF8080&chd=t:0|10|0">Citalopram</a>
+
+        <div class='boxshow' id="show-disease7550753603683614376" style="display: inline;"><a href="javascript:toggle2('disease7550753603683614376')">...more...</a></div>
+        <div class='member-is-a-medicine' id="disease7550753603683614376" style="display: none;"><a href="javascript:toggle2('disease7550753603683614376')">(hide)</a>        <a class="diseaselink" href="http://www.snpedia.com/index.php?title=Citalopram">Citalopram</a>
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs1954787'>rs1954787</a><a href='http://www.snpedia.com/index.php/rs1954787(C;T)'>(C;T)</a></div>
+        <div class='boxmag'>Magnitude: 0<br/>Frequency: <span style='background-color: #FFE3E3;'>54.9%</span><br/>References:6<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'>normal risk</div>
+        <div class='boxshow' id="show-sec-0.989318782157" style="display: inline;"><a href="javascript:toggle2('sec-0.989318782157')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.989318782157" style="display: none;"><a href="javascript:toggle2('sec-0.989318782157')">(hide)</a>
+        <div class='rstext'>rs1954787, located in an intron of the GRIK4 gene, was found to be associated with a somewhat increased rate of successful response to treatment of depression with the drug citalopram. From the abstract of this article: 'The effect size of (this) GRIK4 marker alone was modest, but homozygote carriers of the treatment-response-associated marker alleles of both the GRIK4 and HTR2A (see rs7997012) genes were 23% less likely to experience nonresponse to (citalopram) treatment relative to participants who did not carry any of these marker alleles.' * See also Anxiety Blog posting  [PharmGKB:Curated A study in 1,816 eligible patients from the STAR*D cohort found that genetic variation in a kainic acid-type glutamate receptor is reproducibly associated with response to the antidepressant citalopr...</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+  </div>
+
+  <div class="diseaseinfo">1 snp </div>
+</div>
+  <div class='adiseasebox'>
+
+  <a class='diseasebutton'><img src="http://chart.googleapis.com/chart?chbh=a&chs=100x10&cht=bhs&chco=80FF90,DADADA,FF8080&chd=t:10|0|0">Escitalopram</a>
+
+        <div class='boxshow' id="show-disease5253933260664469346" style="display: inline;"><a href="javascript:toggle2('disease5253933260664469346')">...more...</a></div>
+        <div class='member-is-a-medicine' id="disease5253933260664469346" style="display: none;"><a href="javascript:toggle2('disease5253933260664469346')">(hide)</a>        <a class="diseaselink" href="http://www.snpedia.com/index.php?title=Escitalopram">Escitalopram</a>
+
+  <div  class='boxgoodresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs6311'>rs6311</a><a href='http://www.snpedia.com/index.php/rs6311(C;T)'>(C;T)</a></div>
+        <div class='boxmag'>Magnitude: 2<br/>Frequency: <span style='background-color: #FFE1E1;'>52.2%</span><br/>Repute:Good<br/>References:51<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'>Normal risk of sexual dysfunction when taking SSRI Antidepressants.</div>
+        <div class='boxshow' id="show-sec-0.269869345536" style="display: inline;"><a href="javascript:toggle2('sec-0.269869345536')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.269869345536" style="display: none;"><a href="javascript:toggle2('sec-0.269869345536')">(hide)</a>
+        <div class='rstext'>rs6311 (-1438A&gt;G / A-1438G or -1438G&gt;A / G-1438A) is a SNP located upstream (and within the promoter region of) HTR2A. Multiple Regulatory Variants Modulate Expression of 5-Hydroxytryptamine 2A Receptors in Human Cortex. The minor A allele of rs6311 reduces expression of a previously unannotated extension of the 5' untranslated region of HTR2A mRNA. rs6311 together with rs6314 have a modest effect on depression severity, when examined in the Sequenced Treatment Alternatives to Relieve Depression (STAR*D) study. Three (rs643627-rs594242-rs6311: A-C-T), two (rs594242-rs6311: C-T) and a single functional (rs6311: T) marker were protective against suicidal behavior. The complementary markers (rs594242-rs6311: G-C and rs6311: C) were associated with increased risk for non-violent and impu...</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+  </div>
+
+  <div class="diseaseinfo">1 snp </div>
+</div>
+  <div class='adiseasebox'>
+
+  <a class='diseasebutton'><img src="http://chart.googleapis.com/chart?chbh=a&chs=100x10&cht=bhs&chco=80FF90,DADADA,FF8080&chd=t:0|10|0">Statins</a>
+
+        <div class='boxshow' id="show-disease-7001199673468087607" style="display: inline;"><a href="javascript:toggle2('disease-7001199673468087607')">...more...</a></div>
+        <div class='member-is-a-medicine' id="disease-7001199673468087607" style="display: none;"><a href="javascript:toggle2('disease-7001199673468087607')">(hide)</a>        <a class="diseaselink" href="http://www.snpedia.com/index.php?title=Statins">Statins</a>
+
+  <div  class='boxresult'>
+      <div class='boxresultcol1'>
+        <div class='boxlink'><a href='http://www.snpedia.com/index.php/rs4693596'>rs4693596</a><a href='http://www.snpedia.com/index.php/Special:AddData/Genotype/rs4693596(C;T)'>(C;T)</a></div>
+        <div class='boxmag'>Frequency: <span style='background-color: #FFD7D7;'>41.6%</span><br/>References:0<br/></div>
+      </div>
+      <div class='boxresultcol2'>
+        <div class='boxeffect'></div>
+        <div class='boxshow' id="show-sec-0.657649806032" style="display: inline;"><a href="javascript:toggle2('sec-0.657649806032')">...more...</a></div>
+        <div class='boxrstext' id="sec-0.657649806032" style="display: none;"><a href="javascript:toggle2('sec-0.657649806032')">(hide)</a>
+        <div class='rstext'>rs4693596(C;C) 2x odds of myopathy when taking statins. Statin Response</div>
+      </div>
+      </div>
+      <div class="boxfooter"></div>
+  </div>
+
+  </div>
+
+  <div class="diseaseinfo">1 snp </div>
+</div>
+</div>
+</div>
+     <div class="boxfooter"></div>
+     </div>
+<p><br/></p></body></html>
